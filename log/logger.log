@@ -1,0 +1,1765 @@
+2019-06-21 00:39:53,752 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 00:39:53,752 [    INFO] {}
+2019-06-21 00:39:53,755 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 00:39:53,756 [    INFO] {}
+2019-06-21 00:39:53,759 [    INFO] SELECT DATABASE()
+2019-06-21 00:39:53,759 [    INFO] {}
+2019-06-21 00:39:53,760 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 00:39:53,760 [    INFO] {}
+2019-06-21 00:39:53,764 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 00:39:53,764 [    INFO] {}
+2019-06-21 00:39:53,765 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 00:39:53,765 [    INFO] {}
+2019-06-21 00:39:53,767 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 00:39:53,767 [    INFO] {}
+2019-06-21 00:39:53,768 [    INFO] BEGIN (implicit)
+2019-06-21 00:39:53,770 [    INFO] SELECT coincheck_ticker.id AS coincheck_ticker_id, coincheck_ticker.request_nonce AS coincheck_ticker_request_nonce, coincheck_ticker.last AS coincheck_ticker_last, coincheck_ticker.bid AS coincheck_ticker_bid, coincheck_ticker.ask AS coincheck_ticker_ask, coincheck_ticker.high AS coincheck_ticker_high, coincheck_ticker.low AS coincheck_ticker_low, coincheck_ticker.volume AS coincheck_ticker_volume, coincheck_ticker.timestamp AS coincheck_ticker_timestamp, coincheck_ticker.server_nonce AS coincheck_ticker_server_nonce, coincheck_ticker.created_at AS coincheck_ticker_created_at 
+FROM coincheck_ticker
+2019-06-21 00:39:53,770 [    INFO] {}
+2019-06-21 00:44:27,270 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 00:44:27,270 [    INFO] {}
+2019-06-21 00:44:27,273 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 00:44:27,273 [    INFO] {}
+2019-06-21 00:44:27,276 [    INFO] SELECT DATABASE()
+2019-06-21 00:44:27,276 [    INFO] {}
+2019-06-21 00:44:27,277 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 00:44:27,277 [    INFO] {}
+2019-06-21 00:44:27,280 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 00:44:27,280 [    INFO] {}
+2019-06-21 00:44:27,281 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 00:44:27,281 [    INFO] {}
+2019-06-21 00:44:27,282 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 00:44:27,282 [    INFO] {}
+2019-06-21 00:44:27,283 [    INFO] BEGIN (implicit)
+2019-06-21 00:44:27,284 [    INFO] SELECT coincheck_ticker.id AS coincheck_ticker_id, coincheck_ticker.request_nonce AS coincheck_ticker_request_nonce, coincheck_ticker.last AS coincheck_ticker_last, coincheck_ticker.bid AS coincheck_ticker_bid, coincheck_ticker.ask AS coincheck_ticker_ask, coincheck_ticker.high AS coincheck_ticker_high, coincheck_ticker.low AS coincheck_ticker_low, coincheck_ticker.volume AS coincheck_ticker_volume, coincheck_ticker.timestamp AS coincheck_ticker_timestamp, coincheck_ticker.server_nonce AS coincheck_ticker_server_nonce, coincheck_ticker.created_at AS coincheck_ticker_created_at 
+FROM coincheck_ticker
+2019-06-21 00:44:27,284 [    INFO] {}
+2019-06-21 12:56:03,914 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 12:56:03,915 [    INFO] {}
+2019-06-21 12:56:03,952 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 12:56:03,953 [    INFO] {}
+2019-06-21 12:56:03,959 [    INFO] SELECT DATABASE()
+2019-06-21 12:56:03,960 [    INFO] {}
+2019-06-21 12:56:03,963 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 12:56:03,963 [    INFO] {}
+2019-06-21 12:56:03,991 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 12:56:03,992 [    INFO] {}
+2019-06-21 12:56:03,993 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 12:56:03,994 [    INFO] {}
+2019-06-21 12:56:03,995 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 12:56:03,995 [    INFO] {}
+2019-06-21 12:56:03,998 [    INFO] BEGIN (implicit)
+2019-06-21 12:56:04,001 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 12:56:04,001 [    INFO] {'request_nonce': '20190621125603', 'last': 1041991.0, 'bid': 1041517.0, 'ask': 1041600.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 2786.2548108, 'timestamp': 1561089363, 'server_nonce': datetime.datetime(2019, 6, 21, 12, 56, 3), 'created_at': None}
+2019-06-21 12:56:04,005 [    INFO] ROLLBACK
+2019-06-21 12:57:32,581 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 12:57:32,582 [    INFO] {}
+2019-06-21 12:57:32,585 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 12:57:32,585 [    INFO] {}
+2019-06-21 12:57:32,588 [    INFO] SELECT DATABASE()
+2019-06-21 12:57:32,588 [    INFO] {}
+2019-06-21 12:57:32,589 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 12:57:32,589 [    INFO] {}
+2019-06-21 12:57:32,593 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 12:57:32,593 [    INFO] {}
+2019-06-21 12:57:32,594 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 12:57:32,594 [    INFO] {}
+2019-06-21 12:57:32,595 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 12:57:32,595 [    INFO] {}
+2019-06-21 12:57:32,597 [    INFO] BEGIN (implicit)
+2019-06-21 12:57:32,598 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 12:57:32,598 [    INFO] {'request_nonce': '20190621125732', 'last': 1041638.0, 'bid': 1041511.0, 'ask': 1041989.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 2786.80579966, 'timestamp': 1561089444, 'server_nonce': '20190621125724', 'created_at': None}
+2019-06-21 12:57:32,599 [    INFO] ROLLBACK
+2019-06-21 12:59:47,325 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 12:59:47,326 [    INFO] {}
+2019-06-21 12:59:47,330 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 12:59:47,330 [    INFO] {}
+2019-06-21 12:59:47,333 [    INFO] SELECT DATABASE()
+2019-06-21 12:59:47,334 [    INFO] {}
+2019-06-21 12:59:47,335 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 12:59:47,335 [    INFO] {}
+2019-06-21 12:59:47,339 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 12:59:47,339 [    INFO] {}
+2019-06-21 12:59:47,340 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 12:59:47,341 [    INFO] {}
+2019-06-21 12:59:47,342 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 12:59:47,343 [    INFO] {}
+2019-06-21 12:59:47,344 [    INFO] BEGIN (implicit)
+2019-06-21 12:59:47,346 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 12:59:47,346 [    INFO] {'request_nonce': '20190621125947', 'last': 1044249.0, 'bid': 1044004.0, 'ask': 1044493.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 2791.14972447, 'timestamp': 1561089583, 'server_nonce': '20190621125943', 'created_at': None}
+2019-06-21 12:59:47,357 [    INFO] COMMIT
+2019-06-21 12:59:47,360 [    INFO] BEGIN (implicit)
+2019-06-21 12:59:47,361 [    INFO] SELECT coincheck_ticker.id AS coincheck_ticker_id, coincheck_ticker.request_nonce AS coincheck_ticker_request_nonce, coincheck_ticker.last AS coincheck_ticker_last, coincheck_ticker.bid AS coincheck_ticker_bid, coincheck_ticker.ask AS coincheck_ticker_ask, coincheck_ticker.high AS coincheck_ticker_high, coincheck_ticker.low AS coincheck_ticker_low, coincheck_ticker.volume AS coincheck_ticker_volume, coincheck_ticker.timestamp AS coincheck_ticker_timestamp, coincheck_ticker.server_nonce AS coincheck_ticker_server_nonce, coincheck_ticker.created_at AS coincheck_ticker_created_at 
+FROM coincheck_ticker
+2019-06-21 12:59:47,362 [    INFO] {}
+2019-06-21 13:12:55,652 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 13:12:55,652 [    INFO] {}
+2019-06-21 13:12:55,656 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 13:12:55,656 [    INFO] {}
+2019-06-21 13:12:55,659 [    INFO] SELECT DATABASE()
+2019-06-21 13:12:55,659 [    INFO] {}
+2019-06-21 13:12:55,660 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 13:12:55,660 [    INFO] {}
+2019-06-21 13:12:55,664 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 13:12:55,665 [    INFO] {}
+2019-06-21 13:12:55,666 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 13:12:55,666 [    INFO] {}
+2019-06-21 13:12:55,667 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 13:12:55,667 [    INFO] {}
+2019-06-21 13:12:55,668 [    INFO] BEGIN (implicit)
+2019-06-21 13:12:55,670 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 13:12:55,670 [    INFO] {'request_nonce': '20190621131255', 'last': 1045404.0, 'bid': 1045405.0, 'ask': 1045789.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 2805.11944398, 'timestamp': 1561090366, 'server_nonce': '20190621131246', 'created_at': '2019-06-21 13:12:46'}
+2019-06-21 13:12:55,690 [    INFO] COMMIT
+2019-06-21 13:12:55,695 [    INFO] BEGIN (implicit)
+2019-06-21 13:12:55,696 [    INFO] SELECT coincheck_ticker.id AS coincheck_ticker_id, coincheck_ticker.request_nonce AS coincheck_ticker_request_nonce, coincheck_ticker.last AS coincheck_ticker_last, coincheck_ticker.bid AS coincheck_ticker_bid, coincheck_ticker.ask AS coincheck_ticker_ask, coincheck_ticker.high AS coincheck_ticker_high, coincheck_ticker.low AS coincheck_ticker_low, coincheck_ticker.volume AS coincheck_ticker_volume, coincheck_ticker.timestamp AS coincheck_ticker_timestamp, coincheck_ticker.server_nonce AS coincheck_ticker_server_nonce, coincheck_ticker.created_at AS coincheck_ticker_created_at 
+FROM coincheck_ticker
+2019-06-21 13:12:55,696 [    INFO] {}
+2019-06-21 13:15:31,041 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 13:15:31,041 [    INFO] {}
+2019-06-21 13:15:31,044 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 13:15:31,044 [    INFO] {}
+2019-06-21 13:15:31,047 [    INFO] SELECT DATABASE()
+2019-06-21 13:15:31,047 [    INFO] {}
+2019-06-21 13:15:31,048 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 13:15:31,049 [    INFO] {}
+2019-06-21 13:15:31,053 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 13:15:31,053 [    INFO] {}
+2019-06-21 13:15:31,054 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 13:15:31,054 [    INFO] {}
+2019-06-21 13:15:31,055 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 13:15:31,055 [    INFO] {}
+2019-06-21 13:15:31,056 [    INFO] BEGIN (implicit)
+2019-06-21 13:15:31,058 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 13:15:31,058 [    INFO] {'request_nonce': '20190621131530', 'last': 1045499.0, 'bid': 1045286.0, 'ask': 1045749.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 2802.5505797, 'timestamp': 1561090528, 'server_nonce': '20190621131528', 'created_at': '2019-06-21 13:15:31'}
+2019-06-21 13:15:31,061 [    INFO] COMMIT
+2019-06-21 13:15:31,064 [    INFO] BEGIN (implicit)
+2019-06-21 13:15:31,066 [    INFO] SELECT coincheck_ticker.id AS coincheck_ticker_id, coincheck_ticker.request_nonce AS coincheck_ticker_request_nonce, coincheck_ticker.last AS coincheck_ticker_last, coincheck_ticker.bid AS coincheck_ticker_bid, coincheck_ticker.ask AS coincheck_ticker_ask, coincheck_ticker.high AS coincheck_ticker_high, coincheck_ticker.low AS coincheck_ticker_low, coincheck_ticker.volume AS coincheck_ticker_volume, coincheck_ticker.timestamp AS coincheck_ticker_timestamp, coincheck_ticker.server_nonce AS coincheck_ticker_server_nonce, coincheck_ticker.created_at AS coincheck_ticker_created_at 
+FROM coincheck_ticker
+2019-06-21 13:15:31,066 [    INFO] {}
+2019-06-21 14:10:37,173 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 14:10:37,175 [    INFO] {}
+2019-06-21 14:10:37,177 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 14:10:37,178 [    INFO] {}
+2019-06-21 14:10:37,180 [    INFO] SELECT DATABASE()
+2019-06-21 14:10:37,181 [    INFO] {}
+2019-06-21 14:10:37,182 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 14:10:37,182 [    INFO] {}
+2019-06-21 14:10:37,187 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 14:10:37,187 [    INFO] {}
+2019-06-21 14:10:37,188 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 14:10:37,188 [    INFO] {}
+2019-06-21 14:10:37,189 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 14:10:37,189 [    INFO] {}
+2019-06-21 14:10:37,191 [    INFO] BEGIN (implicit)
+2019-06-21 14:10:37,192 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 14:10:37,193 [    INFO] {'request_nonce': '20190621141037', 'last': 1042863.0, 'bid': 1042800.0, 'ask': 1043226.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 2868.49607546, 'timestamp': 1561093836, 'server_nonce': '20190621141036', 'created_at': '2019-06-21 14:10:37'}
+2019-06-21 14:10:37,196 [    INFO] COMMIT
+2019-06-21 14:10:37,199 [    INFO] BEGIN (implicit)
+2019-06-21 14:10:37,201 [    INFO] SELECT coincheck_ticker.id AS coincheck_ticker_id, coincheck_ticker.request_nonce AS coincheck_ticker_request_nonce, coincheck_ticker.last AS coincheck_ticker_last, coincheck_ticker.bid AS coincheck_ticker_bid, coincheck_ticker.ask AS coincheck_ticker_ask, coincheck_ticker.high AS coincheck_ticker_high, coincheck_ticker.low AS coincheck_ticker_low, coincheck_ticker.volume AS coincheck_ticker_volume, coincheck_ticker.timestamp AS coincheck_ticker_timestamp, coincheck_ticker.server_nonce AS coincheck_ticker_server_nonce, coincheck_ticker.created_at AS coincheck_ticker_created_at 
+FROM coincheck_ticker
+2019-06-21 14:10:37,201 [    INFO] {}
+2019-06-21 17:12:02,178 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 17:12:02,181 [    INFO] {}
+2019-06-21 17:12:02,185 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 17:12:02,186 [    INFO] {}
+2019-06-21 17:12:02,190 [    INFO] SELECT DATABASE()
+2019-06-21 17:12:02,191 [    INFO] {}
+2019-06-21 17:12:02,192 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 17:12:02,193 [    INFO] {}
+2019-06-21 17:12:02,200 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 17:12:02,201 [    INFO] {}
+2019-06-21 17:12:02,202 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 17:12:02,202 [    INFO] {}
+2019-06-21 17:12:02,203 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 17:12:02,203 [    INFO] {}
+2019-06-21 17:12:02,204 [    INFO] BEGIN (implicit)
+2019-06-21 17:12:02,206 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 17:12:02,206 [    INFO] {'request_nonce': '20190621171202', 'last': 1045060.0, 'bid': 1045001.0, 'ask': 1045492.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 3047.65211482, 'timestamp': 1561104714, 'server_nonce': '20190621171154', 'created_at': '2019-06-21 17:12:02'}
+2019-06-21 17:12:02,209 [    INFO] COMMIT
+2019-06-21 17:12:02,212 [    INFO] BEGIN (implicit)
+2019-06-21 17:12:02,214 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-21 17:12:02,214 [    INFO] {'param_1': 15}
+2019-06-21 17:12:25,683 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 17:12:25,683 [    INFO] {}
+2019-06-21 17:12:25,688 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 17:12:25,688 [    INFO] {}
+2019-06-21 17:12:25,693 [    INFO] SELECT DATABASE()
+2019-06-21 17:12:25,693 [    INFO] {}
+2019-06-21 17:12:25,695 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 17:12:25,696 [    INFO] {}
+2019-06-21 17:12:25,702 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 17:12:25,703 [    INFO] {}
+2019-06-21 17:12:25,704 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 17:12:25,705 [    INFO] {}
+2019-06-21 17:12:25,707 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 17:12:25,707 [    INFO] {}
+2019-06-21 17:12:25,709 [    INFO] BEGIN (implicit)
+2019-06-21 17:12:25,711 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 17:12:25,713 [    INFO] {'request_nonce': '20190621171225', 'last': 1045463.0, 'bid': 1045006.0, 'ask': 1045451.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 3047.80711457, 'timestamp': 1561104743, 'server_nonce': '20190621171223', 'created_at': '2019-06-21 17:12:25'}
+2019-06-21 17:12:25,715 [    INFO] COMMIT
+2019-06-21 17:12:25,719 [    INFO] BEGIN (implicit)
+2019-06-21 17:12:25,721 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-21 17:12:25,721 [    INFO] {'param_1': 15}
+2019-06-21 17:38:26,543 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 17:38:26,543 [    INFO] {}
+2019-06-21 17:38:26,546 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 17:38:26,546 [    INFO] {}
+2019-06-21 17:38:26,549 [    INFO] SELECT DATABASE()
+2019-06-21 17:38:26,549 [    INFO] {}
+2019-06-21 17:38:26,550 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 17:38:26,550 [    INFO] {}
+2019-06-21 17:38:26,554 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 17:38:26,554 [    INFO] {}
+2019-06-21 17:38:26,555 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 17:38:26,555 [    INFO] {}
+2019-06-21 17:38:26,556 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 17:38:26,556 [    INFO] {}
+2019-06-21 17:38:26,558 [    INFO] BEGIN (implicit)
+2019-06-21 17:38:26,559 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 17:38:26,559 [    INFO] {'request_nonce': '20190621173826', 'last': 1046109.0, 'bid': 1046122.0, 'ask': 1046499.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 3042.41808529, 'timestamp': 1561106303, 'server_nonce': '20190621173823', 'created_at': '2019-06-21 17:38:26'}
+2019-06-21 17:38:26,563 [    INFO] COMMIT
+2019-06-21 17:38:26,566 [    INFO] BEGIN (implicit)
+2019-06-21 17:38:26,567 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-21 17:38:26,567 [    INFO] {'param_1': 15}
+2019-06-21 17:39:29,825 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 17:39:29,826 [    INFO] {}
+2019-06-21 17:39:29,830 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 17:39:29,830 [    INFO] {}
+2019-06-21 17:39:29,834 [    INFO] SELECT DATABASE()
+2019-06-21 17:39:29,835 [    INFO] {}
+2019-06-21 17:39:29,836 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 17:39:29,836 [    INFO] {}
+2019-06-21 17:39:29,840 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 17:39:29,840 [    INFO] {}
+2019-06-21 17:39:29,841 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 17:39:29,841 [    INFO] {}
+2019-06-21 17:39:29,842 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 17:39:29,842 [    INFO] {}
+2019-06-21 17:39:29,843 [    INFO] BEGIN (implicit)
+2019-06-21 17:39:29,845 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 17:39:29,845 [    INFO] {'request_nonce': '20190621173929', 'last': 1045873.0, 'bid': 1045889.0, 'ask': 1046249.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 3042.94632423, 'timestamp': 1561106365, 'server_nonce': '20190621173925', 'created_at': '2019-06-21 17:39:29'}
+2019-06-21 17:39:29,848 [    INFO] COMMIT
+2019-06-21 17:39:29,851 [    INFO] BEGIN (implicit)
+2019-06-21 17:39:29,852 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-21 17:39:29,854 [    INFO] {'param_1': 15}
+2019-06-21 17:44:28,260 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-21 17:44:28,261 [    INFO] {}
+2019-06-21 17:44:28,266 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-21 17:44:28,267 [    INFO] {}
+2019-06-21 17:44:28,271 [    INFO] SELECT DATABASE()
+2019-06-21 17:44:28,272 [    INFO] {}
+2019-06-21 17:44:28,273 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-21 17:44:28,274 [    INFO] {}
+2019-06-21 17:44:28,281 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-21 17:44:28,281 [    INFO] {}
+2019-06-21 17:44:28,283 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-21 17:44:28,284 [    INFO] {}
+2019-06-21 17:44:28,285 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-21 17:44:28,285 [    INFO] {}
+2019-06-21 17:44:28,287 [    INFO] BEGIN (implicit)
+2019-06-21 17:44:28,289 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-21 17:44:28,289 [    INFO] {'request_nonce': '20190621174428', 'last': 1044672.0, 'bid': 1044556.0, 'ask': 1045076.0, 'high': 1051305.0, 'low': 995257.0, 'volume': 3041.71292917, 'timestamp': 1561106663, 'server_nonce': '20190621174423', 'created_at': '2019-06-21 17:44:28'}
+2019-06-21 17:44:28,300 [    INFO] COMMIT
+2019-06-21 17:44:28,303 [    INFO] BEGIN (implicit)
+2019-06-21 17:44:28,304 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-21 17:44:28,304 [    INFO] {'param_1': 15}
+2019-06-23 01:16:48,969 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 01:16:48,970 [    INFO] {}
+2019-06-23 01:16:49,011 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 01:16:49,011 [    INFO] {}
+2019-06-23 01:16:49,019 [    INFO] SELECT DATABASE()
+2019-06-23 01:16:49,019 [    INFO] {}
+2019-06-23 01:16:49,029 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 01:16:49,029 [    INFO] {}
+2019-06-23 01:16:49,056 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 01:16:49,056 [    INFO] {}
+2019-06-23 01:16:49,058 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 01:16:49,058 [    INFO] {}
+2019-06-23 01:16:49,060 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 01:16:49,060 [    INFO] {}
+2019-06-23 01:16:49,063 [    INFO] BEGIN (implicit)
+2019-06-23 01:16:49,066 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-23 01:16:49,066 [    INFO] {'request_nonce': '20190623011648', 'last': 1172559.0, 'bid': 1172293.0, 'ask': 1172753.0, 'high': 1200000.0, 'low': 1054460.0, 'volume': 7028.3228547, 'timestamp': 1561220205, 'server_nonce': '20190623011645', 'created_at': '2019-06-23 01:16:48'}
+2019-06-23 01:16:49,079 [    INFO] COMMIT
+2019-06-23 01:16:49,085 [    INFO] BEGIN (implicit)
+2019-06-23 01:16:49,087 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 01:16:49,088 [    INFO] {'param_1': 15}
+2019-06-23 01:18:09,377 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 01:18:09,377 [    INFO] {}
+2019-06-23 01:18:09,384 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 01:18:09,384 [    INFO] {}
+2019-06-23 01:18:09,389 [    INFO] SELECT DATABASE()
+2019-06-23 01:18:09,389 [    INFO] {}
+2019-06-23 01:18:09,391 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 01:18:09,391 [    INFO] {}
+2019-06-23 01:18:09,402 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 01:18:09,403 [    INFO] {}
+2019-06-23 01:18:09,404 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 01:18:09,404 [    INFO] {}
+2019-06-23 01:18:09,406 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 01:18:09,406 [    INFO] {}
+2019-06-23 01:18:09,407 [    INFO] BEGIN (implicit)
+2019-06-23 01:18:09,409 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-23 01:18:09,409 [    INFO] {'request_nonce': '20190623011809', 'last': 1172385.0, 'bid': 1172385.0, 'ask': 1172599.0, 'high': 1200000.0, 'low': 1054460.0, 'volume': 7030.51707945, 'timestamp': 1561220283, 'server_nonce': '20190623011803', 'created_at': '2019-06-23 01:18:09'}
+2019-06-23 01:18:09,414 [    INFO] COMMIT
+2019-06-23 01:18:09,418 [    INFO] BEGIN (implicit)
+2019-06-23 01:18:09,419 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 01:18:09,420 [    INFO] {'param_1': 15}
+2019-06-23 01:19:01,261 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 01:19:01,261 [    INFO] {}
+2019-06-23 01:19:01,266 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 01:19:01,266 [    INFO] {}
+2019-06-23 01:19:01,271 [    INFO] SELECT DATABASE()
+2019-06-23 01:19:01,271 [    INFO] {}
+2019-06-23 01:19:01,273 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 01:19:01,273 [    INFO] {}
+2019-06-23 01:19:01,280 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 01:19:01,280 [    INFO] {}
+2019-06-23 01:19:01,282 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 01:19:01,282 [    INFO] {}
+2019-06-23 01:19:01,284 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 01:19:01,284 [    INFO] {}
+2019-06-23 01:19:01,286 [    INFO] BEGIN (implicit)
+2019-06-23 01:19:01,288 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-23 01:19:01,288 [    INFO] {'request_nonce': '20190623011901', 'last': 1172822.0, 'bid': 1172489.0, 'ask': 1172822.0, 'high': 1200000.0, 'low': 1054460.0, 'volume': 7032.19717749, 'timestamp': 1561220333, 'server_nonce': '20190623011853', 'created_at': '2019-06-23 01:19:01'}
+2019-06-23 01:19:01,303 [    INFO] COMMIT
+2019-06-23 01:19:01,305 [    INFO] BEGIN (implicit)
+2019-06-23 01:19:01,307 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 01:19:01,307 [    INFO] {'param_1': 15}
+2019-06-23 01:20:34,523 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 01:20:34,524 [    INFO] {}
+2019-06-23 01:20:34,528 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 01:20:34,529 [    INFO] {}
+2019-06-23 01:20:34,533 [    INFO] SELECT DATABASE()
+2019-06-23 01:20:34,534 [    INFO] {}
+2019-06-23 01:20:34,535 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 01:20:34,536 [    INFO] {}
+2019-06-23 01:20:34,543 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 01:20:34,543 [    INFO] {}
+2019-06-23 01:20:34,545 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 01:20:34,545 [    INFO] {}
+2019-06-23 01:20:34,547 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 01:20:34,547 [    INFO] {}
+2019-06-23 01:20:34,549 [    INFO] BEGIN (implicit)
+2019-06-23 01:20:34,551 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-23 01:20:34,551 [    INFO] {'request_nonce': '20190623012034', 'last': 1173336.0, 'bid': 1172781.0, 'ask': 1173171.0, 'high': 1200000.0, 'low': 1054460.0, 'volume': 7027.5056151, 'timestamp': 1561220427, 'server_nonce': '20190623012027', 'created_at': '2019-06-23 01:20:34'}
+2019-06-23 01:20:34,553 [    INFO] COMMIT
+2019-06-23 01:20:34,557 [    INFO] BEGIN (implicit)
+2019-06-23 01:20:34,558 [    INFO] SELECT coincheck_ticker.id AS coincheck_ticker_id, coincheck_ticker.request_nonce AS coincheck_ticker_request_nonce, coincheck_ticker.last AS coincheck_ticker_last, coincheck_ticker.bid AS coincheck_ticker_bid, coincheck_ticker.ask AS coincheck_ticker_ask, coincheck_ticker.high AS coincheck_ticker_high, coincheck_ticker.low AS coincheck_ticker_low, coincheck_ticker.volume AS coincheck_ticker_volume, coincheck_ticker.timestamp AS coincheck_ticker_timestamp, coincheck_ticker.server_nonce AS coincheck_ticker_server_nonce, coincheck_ticker.created_at AS coincheck_ticker_created_at 
+FROM coincheck_ticker ORDER BY coincheck_ticker.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 01:20:34,558 [    INFO] {'param_1': 15}
+2019-06-23 01:24:27,726 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 01:24:27,726 [    INFO] {}
+2019-06-23 01:24:27,731 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 01:24:27,731 [    INFO] {}
+2019-06-23 01:24:27,736 [    INFO] SELECT DATABASE()
+2019-06-23 01:24:27,736 [    INFO] {}
+2019-06-23 01:24:27,738 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 01:24:27,739 [    INFO] {}
+2019-06-23 01:24:27,745 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 01:24:27,746 [    INFO] {}
+2019-06-23 01:24:27,747 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 01:24:27,747 [    INFO] {}
+2019-06-23 01:24:27,748 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 01:24:27,749 [    INFO] {}
+2019-06-23 01:24:27,750 [    INFO] BEGIN (implicit)
+2019-06-23 01:24:27,751 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(created_at)s)
+2019-06-23 01:24:27,752 [    INFO] {'request_nonce': '20190623012427', 'last': 1170722.0, 'bid': 1170041.0, 'ask': 1170736.0, 'high': 1200000.0, 'low': 1054460.0, 'volume': 7040.21706265, 'timestamp': 1561220664, 'server_nonce': '20190623012424', 'created_at': '2019-06-23 01:24:27'}
+2019-06-23 01:24:27,754 [    INFO] COMMIT
+2019-06-23 01:24:27,758 [    INFO] BEGIN (implicit)
+2019-06-23 01:24:27,759 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 01:24:27,760 [    INFO] {'param_1': 15}
+2019-06-23 15:19:19,564 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 15:19:19,564 [    INFO] {}
+2019-06-23 15:19:19,567 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 15:19:19,567 [    INFO] {}
+2019-06-23 15:19:19,570 [    INFO] SELECT DATABASE()
+2019-06-23 15:19:19,570 [    INFO] {}
+2019-06-23 15:19:19,571 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 15:19:19,571 [    INFO] {}
+2019-06-23 15:19:19,575 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:19:19,575 [    INFO] {}
+2019-06-23 15:19:19,576 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:19:19,576 [    INFO] {}
+2019-06-23 15:19:19,577 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 15:19:19,577 [    INFO] {}
+2019-06-23 15:19:19,578 [    INFO] BEGIN (implicit)
+2019-06-23 15:19:19,580 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 15:19:19,580 [    INFO] {'request_nonce': '20190623151919', 'last': 1156275.0, 'bid': 1156275.0, 'ask': 1156736.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6953.60234627, 'timestamp': 1561270753, 'server_nonce': '20190623151913', 'index_price': 1156505.5, 'created_at': '2019-06-23 15:19:19'}
+2019-06-23 15:19:19,587 [    INFO] COMMIT
+2019-06-23 15:19:19,590 [    INFO] BEGIN (implicit)
+2019-06-23 15:19:19,591 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 15:19:19,592 [    INFO] {'param_1': 15}
+2019-06-23 15:19:19,622 [    INFO] ROLLBACK
+2019-06-23 15:31:06,952 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 15:31:06,952 [    INFO] {}
+2019-06-23 15:31:06,957 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 15:31:06,957 [    INFO] {}
+2019-06-23 15:31:06,962 [    INFO] SELECT DATABASE()
+2019-06-23 15:31:06,962 [    INFO] {}
+2019-06-23 15:31:06,964 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 15:31:06,964 [    INFO] {}
+2019-06-23 15:31:06,971 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:31:06,972 [    INFO] {}
+2019-06-23 15:31:06,973 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:31:06,974 [    INFO] {}
+2019-06-23 15:31:06,975 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 15:31:06,976 [    INFO] {}
+2019-06-23 15:31:06,977 [    INFO] BEGIN (implicit)
+2019-06-23 15:31:06,979 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 15:31:06,979 [    INFO] {'request_nonce': '20190623153106', 'last': 1155540.0, 'bid': 1155720.0, 'ask': 1156159.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6939.89841652, 'timestamp': 1561271463, 'server_nonce': '20190623153103', 'index_price': 1155939.5, 'created_at': '2019-06-23 15:31:06'}
+2019-06-23 15:31:06,984 [    INFO] COMMIT
+2019-06-23 15:31:06,987 [    INFO] BEGIN (implicit)
+2019-06-23 15:31:06,988 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 15:31:06,988 [    INFO] {'param_1': 15}
+2019-06-23 15:31:06,991 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 15:31:06,991 [    INFO] {'server_nonce': '20190623153103', 'index_price': 1155939.5, 'short_ema': nan, 'long_ema': nan, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 15:31:06'}
+2019-06-23 15:31:06,991 [    INFO] ROLLBACK
+2019-06-23 15:32:57,932 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 15:32:57,932 [    INFO] {}
+2019-06-23 15:32:57,936 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 15:32:57,937 [    INFO] {}
+2019-06-23 15:32:57,941 [    INFO] SELECT DATABASE()
+2019-06-23 15:32:57,941 [    INFO] {}
+2019-06-23 15:32:57,942 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 15:32:57,942 [    INFO] {}
+2019-06-23 15:32:57,946 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:32:57,946 [    INFO] {}
+2019-06-23 15:32:57,947 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:32:57,947 [    INFO] {}
+2019-06-23 15:32:57,948 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 15:32:57,948 [    INFO] {}
+2019-06-23 15:32:57,949 [    INFO] BEGIN (implicit)
+2019-06-23 15:32:57,950 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 15:32:57,951 [    INFO] {'request_nonce': '20190623153257', 'last': 1155652.0, 'bid': 1155297.0, 'ask': 1155632.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6943.46784808, 'timestamp': 1561271573, 'server_nonce': '20190623153253', 'index_price': 1155464.5, 'created_at': '2019-06-23 15:32:57'}
+2019-06-23 15:32:57,953 [    INFO] COMMIT
+2019-06-23 15:32:57,957 [    INFO] BEGIN (implicit)
+2019-06-23 15:32:57,958 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 15:32:57,958 [    INFO] {'param_1': 15}
+2019-06-23 15:32:57,962 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 15:32:57,962 [    INFO] {'server_nonce': '20190623153253', 'index_price': 1155464.5, 'short_ema': nan, 'long_ema': nan, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 15:32:57'}
+2019-06-23 15:32:57,962 [    INFO] ROLLBACK
+2019-06-23 15:34:07,690 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 15:34:07,691 [    INFO] {}
+2019-06-23 15:34:07,695 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 15:34:07,696 [    INFO] {}
+2019-06-23 15:34:07,700 [    INFO] SELECT DATABASE()
+2019-06-23 15:34:07,701 [    INFO] {}
+2019-06-23 15:34:07,703 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 15:34:07,703 [    INFO] {}
+2019-06-23 15:34:07,711 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:34:07,711 [    INFO] {}
+2019-06-23 15:34:07,712 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:34:07,712 [    INFO] {}
+2019-06-23 15:34:07,714 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 15:34:07,714 [    INFO] {}
+2019-06-23 15:34:07,715 [    INFO] BEGIN (implicit)
+2019-06-23 15:34:07,717 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 15:34:07,717 [    INFO] {'request_nonce': '20190623153407', 'last': 1153742.0, 'bid': 1153500.0, 'ask': 1153740.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6947.04736281, 'timestamp': 1561271643, 'server_nonce': '20190623153403', 'index_price': 1153620.0, 'created_at': '2019-06-23 15:34:07'}
+2019-06-23 15:34:07,720 [    INFO] COMMIT
+2019-06-23 15:34:07,723 [    INFO] BEGIN (implicit)
+2019-06-23 15:34:07,724 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 15:34:07,725 [    INFO] {'param_1': 15}
+2019-06-23 15:34:07,727 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 15:34:07,727 [    INFO] {'server_nonce': '20190623153403', 'index_price': 1153620.0, 'short_ema': nan, 'long_ema': nan, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 15:34:07'}
+2019-06-23 15:34:07,728 [    INFO] ROLLBACK
+2019-06-23 15:35:54,440 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 15:35:54,440 [    INFO] {}
+2019-06-23 15:35:54,445 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 15:35:54,445 [    INFO] {}
+2019-06-23 15:35:54,450 [    INFO] SELECT DATABASE()
+2019-06-23 15:35:54,450 [    INFO] {}
+2019-06-23 15:35:54,451 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 15:35:54,451 [    INFO] {}
+2019-06-23 15:35:54,455 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:35:54,455 [    INFO] {}
+2019-06-23 15:35:54,456 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:35:54,456 [    INFO] {}
+2019-06-23 15:35:54,457 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 15:35:54,457 [    INFO] {}
+2019-06-23 15:35:54,458 [    INFO] BEGIN (implicit)
+2019-06-23 15:35:54,460 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 15:35:54,461 [    INFO] {'request_nonce': '20190623153554', 'last': 1151450.0, 'bid': 1151671.0, 'ask': 1152558.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6947.03912616, 'timestamp': 1561271744, 'server_nonce': '20190623153544', 'index_price': 1152114.5, 'created_at': '2019-06-23 15:35:54'}
+2019-06-23 15:35:54,463 [    INFO] COMMIT
+2019-06-23 15:35:54,466 [    INFO] BEGIN (implicit)
+2019-06-23 15:35:54,467 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 15:35:54,468 [    INFO] {'param_1': 15}
+2019-06-23 15:35:54,470 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 15:35:54,470 [    INFO] {'server_nonce': '20190623153544', 'index_price': 1152114.5, 'short_ema': nan, 'long_ema': nan, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 15:35:54'}
+2019-06-23 15:35:54,471 [    INFO] ROLLBACK
+2019-06-23 15:48:05,513 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 15:48:05,514 [    INFO] {}
+2019-06-23 15:48:05,518 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 15:48:05,518 [    INFO] {}
+2019-06-23 15:48:05,523 [    INFO] SELECT DATABASE()
+2019-06-23 15:48:05,524 [    INFO] {}
+2019-06-23 15:48:05,525 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 15:48:05,526 [    INFO] {}
+2019-06-23 15:48:05,533 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:48:05,533 [    INFO] {}
+2019-06-23 15:48:05,534 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:48:05,535 [    INFO] {}
+2019-06-23 15:48:05,536 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 15:48:05,536 [    INFO] {}
+2019-06-23 15:48:05,538 [    INFO] BEGIN (implicit)
+2019-06-23 15:48:05,540 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 15:48:05,541 [    INFO] {'request_nonce': '20190623154805', 'last': 1155492.0, 'bid': 1155351.0, 'ask': 1156121.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6955.67854069, 'timestamp': 1561272483, 'server_nonce': '20190623154803', 'index_price': 1155736.0, 'created_at': '2019-06-23 15:48:05'}
+2019-06-23 15:48:05,545 [    INFO] COMMIT
+2019-06-23 15:48:05,547 [    INFO] BEGIN (implicit)
+2019-06-23 15:48:05,549 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 15:48:05,549 [    INFO] {'param_1': 15}
+2019-06-23 15:48:05,553 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 15:48:05,554 [    INFO] {'server_nonce': '20190623154803', 'index_price': 1155736.0, 'short_ema': nan, 'long_ema': nan, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 15:48:05'}
+2019-06-23 15:48:05,554 [    INFO] ROLLBACK
+2019-06-23 15:55:31,233 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 15:55:31,234 [    INFO] {}
+2019-06-23 15:55:31,236 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 15:55:31,237 [    INFO] {}
+2019-06-23 15:55:31,239 [    INFO] SELECT DATABASE()
+2019-06-23 15:55:31,240 [    INFO] {}
+2019-06-23 15:55:31,240 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 15:55:31,241 [    INFO] {}
+2019-06-23 15:55:31,244 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:55:31,245 [    INFO] {}
+2019-06-23 15:55:31,245 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:55:31,246 [    INFO] {}
+2019-06-23 15:55:31,246 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 15:55:31,247 [    INFO] {}
+2019-06-23 15:55:31,248 [    INFO] BEGIN (implicit)
+2019-06-23 15:55:31,249 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 15:55:31,250 [    INFO] {'request_nonce': '20190623155531', 'last': 1151066.0, 'bid': 1150782.0, 'ask': 1151066.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6978.61844391, 'timestamp': 1561272926, 'server_nonce': '20190623155526', 'index_price': 1150924.0, 'created_at': '2019-06-23 15:55:31'}
+2019-06-23 15:55:31,252 [    INFO] COMMIT
+2019-06-23 15:55:31,256 [    INFO] BEGIN (implicit)
+2019-06-23 15:55:31,257 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 15:55:31,258 [    INFO] {'param_1': 15}
+2019-06-23 15:55:31,260 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 15:55:31,261 [    INFO] {'server_nonce': '20190623155526', 'index_price': 1150924.0, 'short_ema': nan, 'long_ema': nan, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 15:55:31'}
+2019-06-23 15:55:31,261 [    INFO] ROLLBACK
+2019-06-23 15:56:08,677 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 15:56:08,677 [    INFO] {}
+2019-06-23 15:56:08,680 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 15:56:08,680 [    INFO] {}
+2019-06-23 15:56:08,683 [    INFO] SELECT DATABASE()
+2019-06-23 15:56:08,683 [    INFO] {}
+2019-06-23 15:56:08,684 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 15:56:08,684 [    INFO] {}
+2019-06-23 15:56:08,688 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:56:08,688 [    INFO] {}
+2019-06-23 15:56:08,689 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:56:08,689 [    INFO] {}
+2019-06-23 15:56:08,690 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 15:56:08,690 [    INFO] {}
+2019-06-23 15:56:08,691 [    INFO] BEGIN (implicit)
+2019-06-23 15:56:08,693 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 15:56:08,693 [    INFO] {'request_nonce': '20190623155608', 'last': 1152419.0, 'bid': 1151617.0, 'ask': 1152412.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6979.2599738, 'timestamp': 1561272962, 'server_nonce': '20190623155602', 'index_price': 1152014.5, 'created_at': '2019-06-23 15:56:08'}
+2019-06-23 15:56:08,694 [    INFO] COMMIT
+2019-06-23 15:56:08,698 [    INFO] BEGIN (implicit)
+2019-06-23 15:56:08,699 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 15:56:08,700 [    INFO] {'param_1': 15}
+2019-06-23 15:56:08,702 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 15:56:08,702 [    INFO] {'server_nonce': '20190623155602', 'index_price': 1152014.5, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 15:56:08'}
+2019-06-23 15:56:08,710 [    INFO] COMMIT
+2019-06-23 15:57:25,507 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 15:57:25,508 [    INFO] {}
+2019-06-23 15:57:25,512 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 15:57:25,513 [    INFO] {}
+2019-06-23 15:57:25,516 [    INFO] SELECT DATABASE()
+2019-06-23 15:57:25,517 [    INFO] {}
+2019-06-23 15:57:25,518 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 15:57:25,518 [    INFO] {}
+2019-06-23 15:57:25,522 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:57:25,522 [    INFO] {}
+2019-06-23 15:57:25,523 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 15:57:25,523 [    INFO] {}
+2019-06-23 15:57:25,524 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 15:57:25,524 [    INFO] {}
+2019-06-23 15:57:25,525 [    INFO] BEGIN (implicit)
+2019-06-23 15:57:25,527 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 15:57:25,528 [    INFO] {'request_nonce': '20190623155725', 'last': 1152317.0, 'bid': 1152321.0, 'ask': 1152961.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6986.09202212, 'timestamp': 1561273044, 'server_nonce': '20190623155724', 'index_price': 1152641.0, 'created_at': '2019-06-23 15:57:25'}
+2019-06-23 15:57:25,531 [    INFO] COMMIT
+2019-06-23 15:57:25,534 [    INFO] BEGIN (implicit)
+2019-06-23 15:57:25,535 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 15:57:25,540 [    INFO] {'param_1': 15}
+2019-06-23 16:00:25,566 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:00:25,567 [    INFO] {}
+2019-06-23 16:00:25,571 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:00:25,572 [    INFO] {}
+2019-06-23 16:00:25,576 [    INFO] SELECT DATABASE()
+2019-06-23 16:00:25,577 [    INFO] {}
+2019-06-23 16:00:25,578 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:00:25,579 [    INFO] {}
+2019-06-23 16:00:25,585 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:00:25,585 [    INFO] {}
+2019-06-23 16:00:25,587 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:00:25,587 [    INFO] {}
+2019-06-23 16:00:25,589 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:00:25,589 [    INFO] {}
+2019-06-23 16:00:25,591 [    INFO] BEGIN (implicit)
+2019-06-23 16:00:25,594 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:00:25,595 [    INFO] {'request_nonce': '20190623160025', 'last': 1150062.0, 'bid': 1149980.0, 'ask': 1150040.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6964.15944491, 'timestamp': 1561273217, 'server_nonce': '20190623160017', 'index_price': 1150010.0, 'created_at': '2019-06-23 16:00:25'}
+2019-06-23 16:00:25,599 [    INFO] COMMIT
+2019-06-23 16:00:25,604 [    INFO] BEGIN (implicit)
+2019-06-23 16:00:25,606 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:00:25,607 [    INFO] {'param_1': 15}
+2019-06-23 16:01:20,037 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:01:20,038 [    INFO] {}
+2019-06-23 16:01:20,042 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:01:20,043 [    INFO] {}
+2019-06-23 16:01:20,047 [    INFO] SELECT DATABASE()
+2019-06-23 16:01:20,047 [    INFO] {}
+2019-06-23 16:01:20,048 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:01:20,048 [    INFO] {}
+2019-06-23 16:01:20,052 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:01:20,053 [    INFO] {}
+2019-06-23 16:01:20,053 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:01:20,054 [    INFO] {}
+2019-06-23 16:01:20,054 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:01:20,054 [    INFO] {}
+2019-06-23 16:01:20,055 [    INFO] BEGIN (implicit)
+2019-06-23 16:01:20,057 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:01:20,057 [    INFO] {'request_nonce': '20190623160119', 'last': 1147796.0, 'bid': 1146136.0, 'ask': 1147793.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6973.0452408, 'timestamp': 1561273273, 'server_nonce': '20190623160113', 'index_price': 1146964.5, 'created_at': '2019-06-23 16:01:20'}
+2019-06-23 16:01:20,060 [    INFO] COMMIT
+2019-06-23 16:01:20,062 [    INFO] BEGIN (implicit)
+2019-06-23 16:01:20,064 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:01:20,066 [    INFO] {'param_1': 15}
+2019-06-23 16:02:26,390 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:02:26,393 [    INFO] {}
+2019-06-23 16:02:26,396 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:02:26,396 [    INFO] {}
+2019-06-23 16:02:26,399 [    INFO] SELECT DATABASE()
+2019-06-23 16:02:26,400 [    INFO] {}
+2019-06-23 16:02:26,401 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:02:26,401 [    INFO] {}
+2019-06-23 16:02:26,404 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:02:26,404 [    INFO] {}
+2019-06-23 16:02:26,405 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:02:26,405 [    INFO] {}
+2019-06-23 16:02:26,406 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:02:26,406 [    INFO] {}
+2019-06-23 16:02:26,407 [    INFO] BEGIN (implicit)
+2019-06-23 16:02:26,409 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:02:26,410 [    INFO] {'request_nonce': '20190623160226', 'last': 1147800.0, 'bid': 1147801.0, 'ask': 1148504.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 6997.61100894, 'timestamp': 1561273343, 'server_nonce': '20190623160223', 'index_price': 1148152.5, 'created_at': '2019-06-23 16:02:26'}
+2019-06-23 16:02:26,413 [    INFO] COMMIT
+2019-06-23 16:02:26,415 [    INFO] BEGIN (implicit)
+2019-06-23 16:02:26,416 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:02:26,418 [    INFO] {'param_1': 15}
+2019-06-23 16:03:57,573 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:03:57,574 [    INFO] {}
+2019-06-23 16:03:57,578 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:03:57,579 [    INFO] {}
+2019-06-23 16:03:57,583 [    INFO] SELECT DATABASE()
+2019-06-23 16:03:57,583 [    INFO] {}
+2019-06-23 16:03:57,584 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:03:57,585 [    INFO] {}
+2019-06-23 16:03:57,588 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:03:57,588 [    INFO] {}
+2019-06-23 16:03:57,589 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:03:57,589 [    INFO] {}
+2019-06-23 16:03:57,590 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:03:57,590 [    INFO] {}
+2019-06-23 16:03:57,592 [    INFO] BEGIN (implicit)
+2019-06-23 16:03:57,594 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:03:57,594 [    INFO] {'request_nonce': '20190623160357', 'last': 1148467.0, 'bid': 1148467.0, 'ask': 1148998.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7012.74415101, 'timestamp': 1561273434, 'server_nonce': '20190623160354', 'index_price': 1148732.5, 'created_at': '2019-06-23 16:03:57'}
+2019-06-23 16:03:57,597 [    INFO] COMMIT
+2019-06-23 16:03:57,600 [    INFO] BEGIN (implicit)
+2019-06-23 16:03:57,601 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:03:57,602 [    INFO] {'param_1': 15}
+2019-06-23 16:03:57,605 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:03:57,605 [    INFO] {'server_nonce': '20190623160354', 'index_price': 1148732.5, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:03:57'}
+2019-06-23 16:03:57,606 [    INFO] COMMIT
+2019-06-23 16:04:07,406 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:04:07,406 [    INFO] {}
+2019-06-23 16:04:07,411 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:04:07,411 [    INFO] {}
+2019-06-23 16:04:07,416 [    INFO] SELECT DATABASE()
+2019-06-23 16:04:07,416 [    INFO] {}
+2019-06-23 16:04:07,418 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:04:07,418 [    INFO] {}
+2019-06-23 16:04:07,424 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:07,424 [    INFO] {}
+2019-06-23 16:04:07,425 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:07,425 [    INFO] {}
+2019-06-23 16:04:07,426 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:04:07,427 [    INFO] {}
+2019-06-23 16:04:07,428 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:07,430 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:04:07,430 [    INFO] {'request_nonce': '20190623160407', 'last': 1148611.0, 'bid': 1148615.0, 'ask': 1149107.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7013.17915101, 'timestamp': 1561273443, 'server_nonce': '20190623160403', 'index_price': 1148861.0, 'created_at': '2019-06-23 16:04:07'}
+2019-06-23 16:04:07,441 [    INFO] COMMIT
+2019-06-23 16:04:07,443 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:07,444 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:04:07,445 [    INFO] {'param_1': 15}
+2019-06-23 16:04:07,447 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:04:07,447 [    INFO] {'server_nonce': '20190623160403', 'index_price': 1148861.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:04:07'}
+2019-06-23 16:04:07,449 [    INFO] COMMIT
+2019-06-23 16:04:09,163 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:04:09,163 [    INFO] {}
+2019-06-23 16:04:09,168 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:04:09,168 [    INFO] {}
+2019-06-23 16:04:09,173 [    INFO] SELECT DATABASE()
+2019-06-23 16:04:09,174 [    INFO] {}
+2019-06-23 16:04:09,175 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:04:09,176 [    INFO] {}
+2019-06-23 16:04:09,182 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:09,182 [    INFO] {}
+2019-06-23 16:04:09,183 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:09,184 [    INFO] {}
+2019-06-23 16:04:09,185 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:04:09,185 [    INFO] {}
+2019-06-23 16:04:09,186 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:09,188 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:04:09,188 [    INFO] {'request_nonce': '20190623160409', 'last': 1148611.0, 'bid': 1148615.0, 'ask': 1149107.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7013.17915101, 'timestamp': 1561273443, 'server_nonce': '20190623160403', 'index_price': 1148861.0, 'created_at': '2019-06-23 16:04:09'}
+2019-06-23 16:04:09,191 [    INFO] COMMIT
+2019-06-23 16:04:09,195 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:09,196 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:04:09,196 [    INFO] {'param_1': 15}
+2019-06-23 16:04:09,199 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:04:09,199 [    INFO] {'server_nonce': '20190623160403', 'index_price': 1148861.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:04:09'}
+2019-06-23 16:04:09,200 [    INFO] COMMIT
+2019-06-23 16:04:11,200 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:04:11,200 [    INFO] {}
+2019-06-23 16:04:11,203 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:04:11,203 [    INFO] {}
+2019-06-23 16:04:11,206 [    INFO] SELECT DATABASE()
+2019-06-23 16:04:11,206 [    INFO] {}
+2019-06-23 16:04:11,207 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:04:11,207 [    INFO] {}
+2019-06-23 16:04:11,211 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:11,211 [    INFO] {}
+2019-06-23 16:04:11,212 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:11,212 [    INFO] {}
+2019-06-23 16:04:11,213 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:04:11,213 [    INFO] {}
+2019-06-23 16:04:11,214 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:11,216 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:04:11,216 [    INFO] {'request_nonce': '20190623160411', 'last': 1148611.0, 'bid': 1148615.0, 'ask': 1149107.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7013.17915101, 'timestamp': 1561273443, 'server_nonce': '20190623160403', 'index_price': 1148861.0, 'created_at': '2019-06-23 16:04:11'}
+2019-06-23 16:04:11,220 [    INFO] COMMIT
+2019-06-23 16:04:11,222 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:11,224 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:04:11,230 [    INFO] {'param_1': 15}
+2019-06-23 16:04:11,232 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:04:11,233 [    INFO] {'server_nonce': '20190623160403', 'index_price': 1148861.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:04:11'}
+2019-06-23 16:04:11,234 [    INFO] COMMIT
+2019-06-23 16:04:13,134 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:04:13,135 [    INFO] {}
+2019-06-23 16:04:13,137 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:04:13,137 [    INFO] {}
+2019-06-23 16:04:13,140 [    INFO] SELECT DATABASE()
+2019-06-23 16:04:13,140 [    INFO] {}
+2019-06-23 16:04:13,141 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:04:13,141 [    INFO] {}
+2019-06-23 16:04:13,145 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:13,145 [    INFO] {}
+2019-06-23 16:04:13,146 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:13,146 [    INFO] {}
+2019-06-23 16:04:13,147 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:04:13,147 [    INFO] {}
+2019-06-23 16:04:13,148 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:13,150 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:04:13,150 [    INFO] {'request_nonce': '20190623160412', 'last': 1148611.0, 'bid': 1148615.0, 'ask': 1149107.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7013.17915101, 'timestamp': 1561273443, 'server_nonce': '20190623160403', 'index_price': 1148861.0, 'created_at': '2019-06-23 16:04:13'}
+2019-06-23 16:04:13,153 [    INFO] COMMIT
+2019-06-23 16:04:13,157 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:13,158 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:04:13,164 [    INFO] {'param_1': 15}
+2019-06-23 16:04:13,166 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:04:13,167 [    INFO] {'server_nonce': '20190623160403', 'index_price': 1148861.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:04:13'}
+2019-06-23 16:04:13,168 [    INFO] COMMIT
+2019-06-23 16:04:14,981 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:04:14,981 [    INFO] {}
+2019-06-23 16:04:14,985 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:04:14,986 [    INFO] {}
+2019-06-23 16:04:14,990 [    INFO] SELECT DATABASE()
+2019-06-23 16:04:14,990 [    INFO] {}
+2019-06-23 16:04:14,991 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:04:14,991 [    INFO] {}
+2019-06-23 16:04:14,995 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:14,995 [    INFO] {}
+2019-06-23 16:04:14,996 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:14,996 [    INFO] {}
+2019-06-23 16:04:14,997 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:04:14,997 [    INFO] {}
+2019-06-23 16:04:14,998 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:15,001 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:04:15,001 [    INFO] {'request_nonce': '20190623160414', 'last': 1148611.0, 'bid': 1148615.0, 'ask': 1149107.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7013.17915101, 'timestamp': 1561273443, 'server_nonce': '20190623160403', 'index_price': 1148861.0, 'created_at': '2019-06-23 16:04:14'}
+2019-06-23 16:04:15,004 [    INFO] COMMIT
+2019-06-23 16:04:15,007 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:15,008 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:04:15,012 [    INFO] {'param_1': 15}
+2019-06-23 16:04:15,015 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:04:15,015 [    INFO] {'server_nonce': '20190623160403', 'index_price': 1148861.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:04:15'}
+2019-06-23 16:04:15,016 [    INFO] COMMIT
+2019-06-23 16:04:16,996 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:04:16,997 [    INFO] {}
+2019-06-23 16:04:16,999 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:04:17,000 [    INFO] {}
+2019-06-23 16:04:17,002 [    INFO] SELECT DATABASE()
+2019-06-23 16:04:17,002 [    INFO] {}
+2019-06-23 16:04:17,003 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:04:17,004 [    INFO] {}
+2019-06-23 16:04:17,007 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:17,008 [    INFO] {}
+2019-06-23 16:04:17,009 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:17,009 [    INFO] {}
+2019-06-23 16:04:17,011 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:04:17,011 [    INFO] {}
+2019-06-23 16:04:17,014 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:17,016 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:04:17,016 [    INFO] {'request_nonce': '20190623160416', 'last': 1148001.0, 'bid': 1148001.0, 'ask': 1148586.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7013.47280738, 'timestamp': 1561273453, 'server_nonce': '20190623160413', 'index_price': 1148293.5, 'created_at': '2019-06-23 16:04:16'}
+2019-06-23 16:04:17,019 [    INFO] COMMIT
+2019-06-23 16:04:17,024 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:17,025 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:04:17,025 [    INFO] {'param_1': 15}
+2019-06-23 16:04:17,028 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:04:17,035 [    INFO] {'server_nonce': '20190623160413', 'index_price': 1148293.5, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:04:17'}
+2019-06-23 16:04:17,037 [    INFO] COMMIT
+2019-06-23 16:04:19,228 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:04:19,229 [    INFO] {}
+2019-06-23 16:04:19,234 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:04:19,234 [    INFO] {}
+2019-06-23 16:04:19,240 [    INFO] SELECT DATABASE()
+2019-06-23 16:04:19,240 [    INFO] {}
+2019-06-23 16:04:19,241 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:04:19,242 [    INFO] {}
+2019-06-23 16:04:19,246 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:19,247 [    INFO] {}
+2019-06-23 16:04:19,248 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:19,248 [    INFO] {}
+2019-06-23 16:04:19,249 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:04:19,250 [    INFO] {}
+2019-06-23 16:04:19,251 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:19,253 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:04:19,253 [    INFO] {'request_nonce': '20190623160419', 'last': 1148001.0, 'bid': 1148001.0, 'ask': 1148586.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7013.47280738, 'timestamp': 1561273453, 'server_nonce': '20190623160413', 'index_price': 1148293.5, 'created_at': '2019-06-23 16:04:19'}
+2019-06-23 16:04:19,264 [    INFO] COMMIT
+2019-06-23 16:04:19,268 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:19,269 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:04:19,270 [    INFO] {'param_1': 15}
+2019-06-23 16:04:19,274 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:04:19,274 [    INFO] {'server_nonce': '20190623160413', 'index_price': 1148293.5, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:04:19'}
+2019-06-23 16:04:19,275 [    INFO] COMMIT
+2019-06-23 16:04:27,930 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:04:27,931 [    INFO] {}
+2019-06-23 16:04:27,934 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:04:27,934 [    INFO] {}
+2019-06-23 16:04:27,937 [    INFO] SELECT DATABASE()
+2019-06-23 16:04:27,937 [    INFO] {}
+2019-06-23 16:04:27,938 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:04:27,938 [    INFO] {}
+2019-06-23 16:04:27,942 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:27,942 [    INFO] {}
+2019-06-23 16:04:27,943 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:04:27,943 [    INFO] {}
+2019-06-23 16:04:27,944 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:04:27,944 [    INFO] {}
+2019-06-23 16:04:27,945 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:27,947 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:04:27,947 [    INFO] {'request_nonce': '20190623160427', 'last': 1148615.0, 'bid': 1148779.0, 'ask': 1148848.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7014.03271585, 'timestamp': 1561273465, 'server_nonce': '20190623160425', 'index_price': 1148813.5, 'created_at': '2019-06-23 16:04:27'}
+2019-06-23 16:04:27,949 [    INFO] COMMIT
+2019-06-23 16:04:27,953 [    INFO] BEGIN (implicit)
+2019-06-23 16:04:27,954 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:04:27,955 [    INFO] {'param_1': 15}
+2019-06-23 16:04:27,958 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:04:27,959 [    INFO] {'server_nonce': '20190623160425', 'index_price': 1148813.5, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:04:27'}
+2019-06-23 16:04:27,960 [    INFO] COMMIT
+2019-06-23 16:05:25,531 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:05:25,532 [    INFO] {}
+2019-06-23 16:05:25,534 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:05:25,534 [    INFO] {}
+2019-06-23 16:05:25,537 [    INFO] SELECT DATABASE()
+2019-06-23 16:05:25,537 [    INFO] {}
+2019-06-23 16:05:25,538 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:05:25,538 [    INFO] {}
+2019-06-23 16:05:25,542 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:05:25,542 [    INFO] {}
+2019-06-23 16:05:25,543 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:05:25,543 [    INFO] {}
+2019-06-23 16:05:25,544 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:05:25,544 [    INFO] {}
+2019-06-23 16:05:25,545 [    INFO] BEGIN (implicit)
+2019-06-23 16:05:25,546 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:05:25,546 [    INFO] {'request_nonce': '20190623160525', 'last': 1148311.0, 'bid': 1148319.0, 'ask': 1149153.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7011.41657085, 'timestamp': 1561273516, 'server_nonce': '20190623160516', 'index_price': 1148736.0, 'created_at': '2019-06-23 16:05:25'}
+2019-06-23 16:05:25,549 [    INFO] COMMIT
+2019-06-23 16:05:25,553 [    INFO] BEGIN (implicit)
+2019-06-23 16:05:25,554 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:05:25,555 [    INFO] {'param_1': 15}
+2019-06-23 16:05:25,558 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:05:25,559 [    INFO] {'server_nonce': '20190623160516', 'index_price': 1148736.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:05:25'}
+2019-06-23 16:05:25,560 [    INFO] COMMIT
+2019-06-23 16:06:00,776 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:06:00,776 [    INFO] {}
+2019-06-23 16:06:00,778 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:06:00,779 [    INFO] {}
+2019-06-23 16:06:00,781 [    INFO] SELECT DATABASE()
+2019-06-23 16:06:00,782 [    INFO] {}
+2019-06-23 16:06:00,783 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:06:00,783 [    INFO] {}
+2019-06-23 16:06:00,787 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:06:00,787 [    INFO] {}
+2019-06-23 16:06:00,788 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:06:00,788 [    INFO] {}
+2019-06-23 16:06:00,789 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:06:00,790 [    INFO] {}
+2019-06-23 16:06:00,791 [    INFO] BEGIN (implicit)
+2019-06-23 16:06:00,792 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:06:00,793 [    INFO] {'request_nonce': '20190623160600', 'last': 1146968.0, 'bid': 1147188.0, 'ask': 1147998.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7021.92474518, 'timestamp': 1561273554, 'server_nonce': '20190623160554', 'index_price': 1147593.0, 'created_at': '2019-06-23 16:06:00'}
+2019-06-23 16:06:00,795 [    INFO] COMMIT
+2019-06-23 16:06:00,799 [    INFO] BEGIN (implicit)
+2019-06-23 16:06:00,800 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:06:00,800 [    INFO] {'param_1': 15}
+2019-06-23 16:06:00,803 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:06:00,804 [    INFO] {'server_nonce': '20190623160554', 'index_price': 1147593.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:06:00'}
+2019-06-23 16:06:00,809 [    INFO] COMMIT
+2019-06-23 16:07:27,762 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:07:27,762 [    INFO] {}
+2019-06-23 16:07:27,766 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:07:27,766 [    INFO] {}
+2019-06-23 16:07:27,768 [    INFO] SELECT DATABASE()
+2019-06-23 16:07:27,769 [    INFO] {}
+2019-06-23 16:07:27,770 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:07:27,770 [    INFO] {}
+2019-06-23 16:07:27,773 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:07:27,774 [    INFO] {}
+2019-06-23 16:07:27,775 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:07:27,775 [    INFO] {}
+2019-06-23 16:07:27,776 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:07:27,776 [    INFO] {}
+2019-06-23 16:07:27,777 [    INFO] BEGIN (implicit)
+2019-06-23 16:07:27,779 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:07:27,779 [    INFO] {'request_nonce': '20190623160725', 'last': 1150469.0, 'bid': 1150015.0, 'ask': 1150469.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7024.59758171, 'timestamp': 1561273643, 'server_nonce': '20190623160723', 'index_price': 1150242.0, 'created_at': '2019-06-23 16:07:27'}
+2019-06-23 16:07:27,782 [    INFO] COMMIT
+2019-06-23 16:07:27,786 [    INFO] BEGIN (implicit)
+2019-06-23 16:07:27,787 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:07:27,787 [    INFO] {'param_1': 15}
+2019-06-23 16:07:27,790 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-23 16:07:27,790 [    INFO] {'server_nonce': '20190623160723', 'index_price': 1150242.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-23 16:07:27'}
+2019-06-23 16:07:27,796 [    INFO] COMMIT
+2019-06-23 16:09:04,445 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-23 16:09:04,446 [    INFO] {}
+2019-06-23 16:09:04,450 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-23 16:09:04,451 [    INFO] {}
+2019-06-23 16:09:04,455 [    INFO] SELECT DATABASE()
+2019-06-23 16:09:04,455 [    INFO] {}
+2019-06-23 16:09:04,457 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-23 16:09:04,458 [    INFO] {}
+2019-06-23 16:09:04,464 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:09:04,464 [    INFO] {}
+2019-06-23 16:09:04,467 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-23 16:09:04,467 [    INFO] {}
+2019-06-23 16:09:04,469 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-23 16:09:04,469 [    INFO] {}
+2019-06-23 16:09:04,471 [    INFO] BEGIN (implicit)
+2019-06-23 16:09:04,473 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-23 16:09:04,473 [    INFO] {'request_nonce': '20190623160904', 'last': 1150959.0, 'bid': 1151065.0, 'ask': 1151528.0, 'high': 1200000.0, 'low': 1095000.0, 'volume': 7026.6038136, 'timestamp': 1561273743, 'server_nonce': '20190623160903', 'index_price': 1151296.5, 'created_at': '2019-06-23 16:09:04'}
+2019-06-23 16:09:04,476 [    INFO] COMMIT
+2019-06-23 16:09:04,478 [    INFO] BEGIN (implicit)
+2019-06-23 16:09:04,480 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-23 16:09:04,480 [    INFO] {'param_1': 15}
+2019-06-24 00:48:25,849 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 00:48:25,854 [    INFO] {}
+2019-06-24 00:48:25,859 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 00:48:25,859 [    INFO] {}
+2019-06-24 00:48:25,863 [    INFO] SELECT DATABASE()
+2019-06-24 00:48:25,863 [    INFO] {}
+2019-06-24 00:48:25,864 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 00:48:25,865 [    INFO] {}
+2019-06-24 00:48:25,870 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 00:48:25,870 [    INFO] {}
+2019-06-24 00:48:25,871 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 00:48:25,871 [    INFO] {}
+2019-06-24 00:48:25,872 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 00:48:25,872 [    INFO] {}
+2019-06-24 00:48:25,874 [    INFO] BEGIN (implicit)
+2019-06-24 00:48:25,875 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 00:48:25,876 [    INFO] {'request_nonce': '20190624004825', 'last': 1148907.0, 'bid': 1148914.0, 'ask': 1149648.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5213.35626899, 'timestamp': 1561304904, 'server_nonce': '20190624004824', 'index_price': 1149281.0, 'created_at': '2019-06-24 00:48:25'}
+2019-06-24 00:48:25,880 [    INFO] COMMIT
+2019-06-24 00:48:25,884 [    INFO] BEGIN (implicit)
+2019-06-24 00:48:25,885 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 00:48:25,885 [    INFO] {'param_1': 15}
+2019-06-24 00:49:34,447 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 00:49:34,447 [    INFO] {}
+2019-06-24 00:49:34,450 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 00:49:34,450 [    INFO] {}
+2019-06-24 00:49:34,453 [    INFO] SELECT DATABASE()
+2019-06-24 00:49:34,453 [    INFO] {}
+2019-06-24 00:49:34,454 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 00:49:34,454 [    INFO] {}
+2019-06-24 00:49:34,458 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 00:49:34,458 [    INFO] {}
+2019-06-24 00:49:34,459 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 00:49:34,460 [    INFO] {}
+2019-06-24 00:49:34,460 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 00:49:34,461 [    INFO] {}
+2019-06-24 00:49:34,462 [    INFO] BEGIN (implicit)
+2019-06-24 00:49:34,463 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 00:49:34,463 [    INFO] {'request_nonce': '20190624004934', 'last': 1150307.0, 'bid': 1149834.0, 'ask': 1150542.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5213.84944089, 'timestamp': 1561304966, 'server_nonce': '20190624004926', 'index_price': 1150188.0, 'created_at': '2019-06-24 00:49:34'}
+2019-06-24 00:49:34,470 [    INFO] COMMIT
+2019-06-24 00:49:34,474 [    INFO] BEGIN (implicit)
+2019-06-24 00:49:34,476 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 00:49:34,482 [    INFO] {'param_1': 15}
+2019-06-24 00:51:34,125 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 00:51:34,125 [    INFO] {}
+2019-06-24 00:51:34,127 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 00:51:34,128 [    INFO] {}
+2019-06-24 00:51:34,131 [    INFO] SELECT DATABASE()
+2019-06-24 00:51:34,131 [    INFO] {}
+2019-06-24 00:51:34,132 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 00:51:34,132 [    INFO] {}
+2019-06-24 00:51:34,136 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 00:51:34,136 [    INFO] {}
+2019-06-24 00:51:34,137 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 00:51:34,137 [    INFO] {}
+2019-06-24 00:51:34,139 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 00:51:34,139 [    INFO] {}
+2019-06-24 00:51:34,140 [    INFO] BEGIN (implicit)
+2019-06-24 00:51:34,142 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 00:51:34,142 [    INFO] {'request_nonce': '20190624005133', 'last': 1149727.0, 'bid': 1149075.0, 'ask': 1149597.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5196.2239337, 'timestamp': 1561305093, 'server_nonce': '20190624005133', 'index_price': 1149336.0, 'created_at': '2019-06-24 00:51:34'}
+2019-06-24 00:51:34,144 [    INFO] COMMIT
+2019-06-24 00:51:34,148 [    INFO] BEGIN (implicit)
+2019-06-24 00:51:34,149 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 00:51:34,149 [    INFO] {'param_1': 15}
+2019-06-24 00:51:34,153 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 00:51:34,154 [    INFO] {'server_nonce': '20190624005133', 'index_price': 1149336.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 00:51:34'}
+2019-06-24 00:51:34,155 [    INFO] COMMIT
+2019-06-24 00:53:00,925 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 00:53:00,925 [    INFO] {}
+2019-06-24 00:53:00,928 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 00:53:00,928 [    INFO] {}
+2019-06-24 00:53:00,931 [    INFO] SELECT DATABASE()
+2019-06-24 00:53:00,931 [    INFO] {}
+2019-06-24 00:53:00,932 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 00:53:00,932 [    INFO] {}
+2019-06-24 00:53:00,936 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 00:53:00,936 [    INFO] {}
+2019-06-24 00:53:00,937 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 00:53:00,937 [    INFO] {}
+2019-06-24 00:53:00,938 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 00:53:00,938 [    INFO] {}
+2019-06-24 00:53:00,939 [    INFO] BEGIN (implicit)
+2019-06-24 00:53:00,941 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 00:53:00,941 [    INFO] {'request_nonce': '20190624005300', 'last': 1149001.0, 'bid': 1148907.0, 'ask': 1149936.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5198.19424938, 'timestamp': 1561305176, 'server_nonce': '20190624005256', 'index_price': 1149421.5, 'created_at': '2019-06-24 00:53:00'}
+2019-06-24 00:53:00,944 [    INFO] COMMIT
+2019-06-24 00:53:00,947 [    INFO] BEGIN (implicit)
+2019-06-24 00:53:00,948 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 00:53:00,948 [    INFO] {'param_1': 15}
+2019-06-24 00:53:00,952 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 00:53:00,952 [    INFO] {'server_nonce': '20190624005256', 'index_price': 1149421.5, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 00:53:00'}
+2019-06-24 00:53:00,953 [    INFO] COMMIT
+2019-06-24 01:10:05,780 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:10:05,782 [    INFO] {}
+2019-06-24 01:10:05,785 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:10:05,785 [    INFO] {}
+2019-06-24 01:10:05,789 [    INFO] SELECT DATABASE()
+2019-06-24 01:10:05,789 [    INFO] {}
+2019-06-24 01:10:05,791 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:10:05,791 [    INFO] {}
+2019-06-24 01:10:05,795 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:10:05,795 [    INFO] {}
+2019-06-24 01:10:05,796 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:10:05,796 [    INFO] {}
+2019-06-24 01:10:05,797 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:10:05,798 [    INFO] {}
+2019-06-24 01:10:05,799 [    INFO] BEGIN (implicit)
+2019-06-24 01:10:05,801 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:10:05,801 [    INFO] {'request_nonce': '20190624011005', 'last': 1146917.0, 'bid': 1146121.0, 'ask': 1146908.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5157.64688869, 'timestamp': 1561306193, 'server_nonce': '20190624010953', 'index_price': 1146514.5, 'created_at': '2019-06-24 01:10:05'}
+2019-06-24 01:10:05,804 [    INFO] COMMIT
+2019-06-24 01:10:05,808 [    INFO] BEGIN (implicit)
+2019-06-24 01:10:05,810 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:10:05,811 [    INFO] {'param_1': 30}
+2019-06-24 01:11:35,597 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:11:35,597 [    INFO] {}
+2019-06-24 01:11:35,600 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:11:35,600 [    INFO] {}
+2019-06-24 01:11:35,603 [    INFO] SELECT DATABASE()
+2019-06-24 01:11:35,603 [    INFO] {}
+2019-06-24 01:11:35,604 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:11:35,604 [    INFO] {}
+2019-06-24 01:11:35,608 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:11:35,608 [    INFO] {}
+2019-06-24 01:11:35,609 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:11:35,610 [    INFO] {}
+2019-06-24 01:11:35,611 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:11:35,611 [    INFO] {}
+2019-06-24 01:11:35,612 [    INFO] BEGIN (implicit)
+2019-06-24 01:11:35,614 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:11:35,614 [    INFO] {'request_nonce': '20190624011135', 'last': 1147839.0, 'bid': 1147614.0, 'ask': 1147782.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5143.73710361, 'timestamp': 1561306293, 'server_nonce': '20190624011133', 'index_price': 1147698.0, 'created_at': '2019-06-24 01:11:35'}
+2019-06-24 01:11:35,617 [    INFO] COMMIT
+2019-06-24 01:11:35,623 [    INFO] BEGIN (implicit)
+2019-06-24 01:11:35,624 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:11:35,625 [    INFO] {'param_1': 30}
+2019-06-24 01:14:43,470 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:14:43,471 [    INFO] {}
+2019-06-24 01:14:43,475 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:14:43,476 [    INFO] {}
+2019-06-24 01:14:43,479 [    INFO] SELECT DATABASE()
+2019-06-24 01:14:43,480 [    INFO] {}
+2019-06-24 01:14:43,481 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:14:43,481 [    INFO] {}
+2019-06-24 01:14:43,484 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:14:43,485 [    INFO] {}
+2019-06-24 01:14:43,486 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:14:43,486 [    INFO] {}
+2019-06-24 01:14:43,487 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:14:43,487 [    INFO] {}
+2019-06-24 01:14:43,488 [    INFO] BEGIN (implicit)
+2019-06-24 01:14:43,490 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:14:43,490 [    INFO] {'request_nonce': '20190624011443', 'last': 1147899.0, 'bid': 1147808.0, 'ask': 1148591.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5153.48489681, 'timestamp': 1561306475, 'server_nonce': '20190624011435', 'index_price': 1148199.5, 'created_at': '2019-06-24 01:14:43'}
+2019-06-24 01:14:43,492 [    INFO] COMMIT
+2019-06-24 01:14:43,497 [    INFO] BEGIN (implicit)
+2019-06-24 01:14:43,498 [    INFO] SELECT count(*) AS count_1 
+FROM (SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema) AS anon_1
+2019-06-24 01:14:43,499 [    INFO] {}
+2019-06-24 01:14:43,516 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC
+2019-06-24 01:14:43,516 [    INFO] {}
+2019-06-24 01:16:10,483 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:10,483 [    INFO] {}
+2019-06-24 01:16:10,487 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:10,488 [    INFO] {}
+2019-06-24 01:16:10,492 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:10,492 [    INFO] {}
+2019-06-24 01:16:10,494 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:10,494 [    INFO] {}
+2019-06-24 01:16:10,498 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:10,498 [    INFO] {}
+2019-06-24 01:16:10,499 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:10,499 [    INFO] {}
+2019-06-24 01:16:10,500 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:10,500 [    INFO] {}
+2019-06-24 01:16:10,501 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:10,502 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:10,502 [    INFO] {'request_nonce': '20190624011610', 'last': 1146789.0, 'bid': 1146110.0, 'ask': 1147167.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5148.50303379, 'timestamp': 1561306563, 'server_nonce': '20190624011603', 'index_price': 1146638.5, 'created_at': '2019-06-24 01:16:10'}
+2019-06-24 01:16:10,505 [    INFO] COMMIT
+2019-06-24 01:16:10,508 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:10,509 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:10,510 [    INFO] {'param_1': 30}
+2019-06-24 01:16:10,513 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:10,513 [    INFO] {'server_nonce': '20190624011603', 'index_price': 1146638.5, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:10'}
+2019-06-24 01:16:10,514 [    INFO] COMMIT
+2019-06-24 01:16:28,240 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:28,241 [    INFO] {}
+2019-06-24 01:16:28,244 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:28,245 [    INFO] {}
+2019-06-24 01:16:28,248 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:28,248 [    INFO] {}
+2019-06-24 01:16:28,249 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:28,249 [    INFO] {}
+2019-06-24 01:16:28,253 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:28,253 [    INFO] {}
+2019-06-24 01:16:28,254 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:28,254 [    INFO] {}
+2019-06-24 01:16:28,255 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:28,255 [    INFO] {}
+2019-06-24 01:16:28,256 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:28,258 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:28,258 [    INFO] {'request_nonce': '20190624011628', 'last': 1145858.0, 'bid': 1145790.0, 'ask': 1145876.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5148.64778314, 'timestamp': 1561306585, 'server_nonce': '20190624011625', 'index_price': 1145833.0, 'created_at': '2019-06-24 01:16:28'}
+2019-06-24 01:16:28,263 [    INFO] COMMIT
+2019-06-24 01:16:28,265 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:28,267 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:28,267 [    INFO] {'param_1': 30}
+2019-06-24 01:16:28,271 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:28,279 [    INFO] {'server_nonce': '20190624011625', 'index_price': 1145833.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:28'}
+2019-06-24 01:16:28,281 [    INFO] COMMIT
+2019-06-24 01:16:30,881 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:30,882 [    INFO] {}
+2019-06-24 01:16:30,886 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:30,886 [    INFO] {}
+2019-06-24 01:16:30,890 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:30,890 [    INFO] {}
+2019-06-24 01:16:30,891 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:30,891 [    INFO] {}
+2019-06-24 01:16:30,895 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:30,896 [    INFO] {}
+2019-06-24 01:16:30,896 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:30,897 [    INFO] {}
+2019-06-24 01:16:30,898 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:30,898 [    INFO] {}
+2019-06-24 01:16:30,899 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:30,901 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:30,901 [    INFO] {'request_nonce': '20190624011630', 'last': 1145858.0, 'bid': 1145790.0, 'ask': 1145876.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5148.64778314, 'timestamp': 1561306585, 'server_nonce': '20190624011625', 'index_price': 1145833.0, 'created_at': '2019-06-24 01:16:30'}
+2019-06-24 01:16:30,904 [    INFO] COMMIT
+2019-06-24 01:16:30,907 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:30,909 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:30,920 [    INFO] {'param_1': 30}
+2019-06-24 01:16:30,924 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:30,925 [    INFO] {'server_nonce': '20190624011625', 'index_price': 1145833.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:30'}
+2019-06-24 01:16:30,926 [    INFO] COMMIT
+2019-06-24 01:16:33,413 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:33,413 [    INFO] {}
+2019-06-24 01:16:33,419 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:33,420 [    INFO] {}
+2019-06-24 01:16:33,424 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:33,424 [    INFO] {}
+2019-06-24 01:16:33,426 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:33,426 [    INFO] {}
+2019-06-24 01:16:33,432 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:33,432 [    INFO] {}
+2019-06-24 01:16:33,433 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:33,434 [    INFO] {}
+2019-06-24 01:16:33,435 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:33,435 [    INFO] {}
+2019-06-24 01:16:33,436 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:33,438 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:33,438 [    INFO] {'request_nonce': '20190624011633', 'last': 1145858.0, 'bid': 1145790.0, 'ask': 1145876.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5148.64778314, 'timestamp': 1561306585, 'server_nonce': '20190624011625', 'index_price': 1145833.0, 'created_at': '2019-06-24 01:16:33'}
+2019-06-24 01:16:33,457 [    INFO] COMMIT
+2019-06-24 01:16:33,461 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:33,462 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:33,462 [    INFO] {'param_1': 30}
+2019-06-24 01:16:33,466 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:33,467 [    INFO] {'server_nonce': '20190624011625', 'index_price': 1145833.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:33'}
+2019-06-24 01:16:33,468 [    INFO] COMMIT
+2019-06-24 01:16:36,051 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:36,051 [    INFO] {}
+2019-06-24 01:16:36,054 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:36,054 [    INFO] {}
+2019-06-24 01:16:36,058 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:36,058 [    INFO] {}
+2019-06-24 01:16:36,059 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:36,059 [    INFO] {}
+2019-06-24 01:16:36,063 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:36,063 [    INFO] {}
+2019-06-24 01:16:36,064 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:36,065 [    INFO] {}
+2019-06-24 01:16:36,066 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:36,066 [    INFO] {}
+2019-06-24 01:16:36,067 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:36,069 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:36,069 [    INFO] {'request_nonce': '20190624011635', 'last': 1145858.0, 'bid': 1145790.0, 'ask': 1145876.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5148.64778314, 'timestamp': 1561306585, 'server_nonce': '20190624011625', 'index_price': 1145833.0, 'created_at': '2019-06-24 01:16:36'}
+2019-06-24 01:16:36,073 [    INFO] COMMIT
+2019-06-24 01:16:36,077 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:36,079 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:36,088 [    INFO] {'param_1': 30}
+2019-06-24 01:16:36,092 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:36,093 [    INFO] {'server_nonce': '20190624011625', 'index_price': 1145833.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:36'}
+2019-06-24 01:16:36,094 [    INFO] COMMIT
+2019-06-24 01:16:42,194 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:42,194 [    INFO] {}
+2019-06-24 01:16:42,199 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:42,199 [    INFO] {}
+2019-06-24 01:16:42,203 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:42,204 [    INFO] {}
+2019-06-24 01:16:42,205 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:42,205 [    INFO] {}
+2019-06-24 01:16:42,209 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:42,209 [    INFO] {}
+2019-06-24 01:16:42,210 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:42,210 [    INFO] {}
+2019-06-24 01:16:42,211 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:42,211 [    INFO] {}
+2019-06-24 01:16:42,212 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:42,214 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:42,214 [    INFO] {'request_nonce': '20190624011642', 'last': 1145735.0, 'bid': 1145237.0, 'ask': 1145759.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5149.06427261, 'timestamp': 1561306595, 'server_nonce': '20190624011635', 'index_price': 1145498.0, 'created_at': '2019-06-24 01:16:42'}
+2019-06-24 01:16:42,216 [    INFO] COMMIT
+2019-06-24 01:16:42,220 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:42,221 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:42,222 [    INFO] {'param_1': 30}
+2019-06-24 01:16:42,225 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:42,225 [    INFO] {'server_nonce': '20190624011635', 'index_price': 1145498.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:42'}
+2019-06-24 01:16:42,235 [    INFO] COMMIT
+2019-06-24 01:16:44,409 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:44,410 [    INFO] {}
+2019-06-24 01:16:44,413 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:44,413 [    INFO] {}
+2019-06-24 01:16:44,416 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:44,416 [    INFO] {}
+2019-06-24 01:16:44,417 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:44,417 [    INFO] {}
+2019-06-24 01:16:44,420 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:44,421 [    INFO] {}
+2019-06-24 01:16:44,421 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:44,422 [    INFO] {}
+2019-06-24 01:16:44,423 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:44,423 [    INFO] {}
+2019-06-24 01:16:44,424 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:44,425 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:44,426 [    INFO] {'request_nonce': '20190624011644', 'last': 1145735.0, 'bid': 1145237.0, 'ask': 1145759.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5149.06427261, 'timestamp': 1561306595, 'server_nonce': '20190624011635', 'index_price': 1145498.0, 'created_at': '2019-06-24 01:16:44'}
+2019-06-24 01:16:44,429 [    INFO] COMMIT
+2019-06-24 01:16:44,431 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:44,433 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:44,433 [    INFO] {'param_1': 30}
+2019-06-24 01:16:44,438 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:44,438 [    INFO] {'server_nonce': '20190624011635', 'index_price': 1145498.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:44'}
+2019-06-24 01:16:44,446 [    INFO] COMMIT
+2019-06-24 01:16:46,629 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:46,629 [    INFO] {}
+2019-06-24 01:16:46,632 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:46,632 [    INFO] {}
+2019-06-24 01:16:46,635 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:46,635 [    INFO] {}
+2019-06-24 01:16:46,636 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:46,636 [    INFO] {}
+2019-06-24 01:16:46,640 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:46,640 [    INFO] {}
+2019-06-24 01:16:46,641 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:46,641 [    INFO] {}
+2019-06-24 01:16:46,642 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:46,642 [    INFO] {}
+2019-06-24 01:16:46,643 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:46,645 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:46,645 [    INFO] {'request_nonce': '20190624011646', 'last': 1145843.0, 'bid': 1144699.0, 'ask': 1145843.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5154.36038139, 'timestamp': 1561306604, 'server_nonce': '20190624011644', 'index_price': 1145271.0, 'created_at': '2019-06-24 01:16:46'}
+2019-06-24 01:16:46,648 [    INFO] COMMIT
+2019-06-24 01:16:46,652 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:46,653 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:46,653 [    INFO] {'param_1': 30}
+2019-06-24 01:16:46,657 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:46,657 [    INFO] {'server_nonce': '20190624011644', 'index_price': 1145271.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:46'}
+2019-06-24 01:16:46,658 [    INFO] COMMIT
+2019-06-24 01:16:48,886 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:48,887 [    INFO] {}
+2019-06-24 01:16:48,891 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:48,892 [    INFO] {}
+2019-06-24 01:16:48,895 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:48,896 [    INFO] {}
+2019-06-24 01:16:48,897 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:48,897 [    INFO] {}
+2019-06-24 01:16:48,901 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:48,901 [    INFO] {}
+2019-06-24 01:16:48,902 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:48,902 [    INFO] {}
+2019-06-24 01:16:48,903 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:48,903 [    INFO] {}
+2019-06-24 01:16:48,904 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:48,906 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:48,907 [    INFO] {'request_nonce': '20190624011648', 'last': 1145843.0, 'bid': 1144699.0, 'ask': 1145843.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5154.36038139, 'timestamp': 1561306604, 'server_nonce': '20190624011644', 'index_price': 1145271.0, 'created_at': '2019-06-24 01:16:48'}
+2019-06-24 01:16:48,909 [    INFO] COMMIT
+2019-06-24 01:16:48,912 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:48,913 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:48,918 [    INFO] {'param_1': 30}
+2019-06-24 01:16:48,922 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:48,922 [    INFO] {'server_nonce': '20190624011644', 'index_price': 1145271.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:48'}
+2019-06-24 01:16:48,923 [    INFO] COMMIT
+2019-06-24 01:16:51,238 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:51,239 [    INFO] {}
+2019-06-24 01:16:51,243 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:51,244 [    INFO] {}
+2019-06-24 01:16:51,248 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:51,249 [    INFO] {}
+2019-06-24 01:16:51,250 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:51,251 [    INFO] {}
+2019-06-24 01:16:51,257 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:51,258 [    INFO] {}
+2019-06-24 01:16:51,259 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:51,260 [    INFO] {}
+2019-06-24 01:16:51,261 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:51,262 [    INFO] {}
+2019-06-24 01:16:51,264 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:51,266 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:51,266 [    INFO] {'request_nonce': '20190624011651', 'last': 1145843.0, 'bid': 1144699.0, 'ask': 1145843.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5154.36038139, 'timestamp': 1561306604, 'server_nonce': '20190624011644', 'index_price': 1145271.0, 'created_at': '2019-06-24 01:16:51'}
+2019-06-24 01:16:51,278 [    INFO] COMMIT
+2019-06-24 01:16:51,282 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:51,283 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:51,284 [    INFO] {'param_1': 30}
+2019-06-24 01:16:51,287 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:51,288 [    INFO] {'server_nonce': '20190624011644', 'index_price': 1145271.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:51'}
+2019-06-24 01:16:51,289 [    INFO] COMMIT
+2019-06-24 01:16:53,726 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:16:53,727 [    INFO] {}
+2019-06-24 01:16:53,729 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:16:53,730 [    INFO] {}
+2019-06-24 01:16:53,732 [    INFO] SELECT DATABASE()
+2019-06-24 01:16:53,733 [    INFO] {}
+2019-06-24 01:16:53,733 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:16:53,734 [    INFO] {}
+2019-06-24 01:16:53,737 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:53,737 [    INFO] {}
+2019-06-24 01:16:53,738 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:16:53,738 [    INFO] {}
+2019-06-24 01:16:53,739 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:16:53,739 [    INFO] {}
+2019-06-24 01:16:53,741 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:53,742 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:16:53,742 [    INFO] {'request_nonce': '20190624011653', 'last': 1145843.0, 'bid': 1144699.0, 'ask': 1145843.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5154.36038139, 'timestamp': 1561306604, 'server_nonce': '20190624011644', 'index_price': 1145271.0, 'created_at': '2019-06-24 01:16:53'}
+2019-06-24 01:16:53,749 [    INFO] COMMIT
+2019-06-24 01:16:53,754 [    INFO] BEGIN (implicit)
+2019-06-24 01:16:53,757 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:16:53,757 [    INFO] {'param_1': 30}
+2019-06-24 01:16:53,764 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:16:53,764 [    INFO] {'server_nonce': '20190624011644', 'index_price': 1145271.0, 'short_ema': 0, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:16:53'}
+2019-06-24 01:16:53,766 [    INFO] COMMIT
+2019-06-24 01:18:08,190 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:18:08,190 [    INFO] {}
+2019-06-24 01:18:08,193 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:18:08,194 [    INFO] {}
+2019-06-24 01:18:08,197 [    INFO] SELECT DATABASE()
+2019-06-24 01:18:08,197 [    INFO] {}
+2019-06-24 01:18:08,198 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:18:08,198 [    INFO] {}
+2019-06-24 01:18:08,202 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:18:08,202 [    INFO] {}
+2019-06-24 01:18:08,203 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:18:08,203 [    INFO] {}
+2019-06-24 01:18:08,204 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:18:08,204 [    INFO] {}
+2019-06-24 01:18:08,205 [    INFO] BEGIN (implicit)
+2019-06-24 01:18:08,207 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:18:08,207 [    INFO] {'request_nonce': '20190624011808', 'last': 1144999.0, 'bid': 1144521.0, 'ask': 1144999.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5158.2021319, 'timestamp': 1561306683, 'server_nonce': '20190624011803', 'index_price': 1144760.0, 'created_at': '2019-06-24 01:18:08'}
+2019-06-24 01:18:08,209 [    INFO] COMMIT
+2019-06-24 01:18:08,212 [    INFO] BEGIN (implicit)
+2019-06-24 01:18:08,213 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:18:08,213 [    INFO] {'param_1': 30}
+2019-06-24 01:18:08,217 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:18:08,219 [    INFO] {'server_nonce': '20190624011803', 'index_price': 1144760.0, 'short_ema': 1144853.860481181, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:18:08'}
+2019-06-24 01:18:08,219 [    INFO] ROLLBACK
+2019-06-24 01:20:48,253 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:20:48,254 [    INFO] {}
+2019-06-24 01:20:48,258 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:20:48,259 [    INFO] {}
+2019-06-24 01:20:48,264 [    INFO] SELECT DATABASE()
+2019-06-24 01:20:48,264 [    INFO] {}
+2019-06-24 01:20:48,266 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:20:48,266 [    INFO] {}
+2019-06-24 01:20:48,273 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:20:48,274 [    INFO] {}
+2019-06-24 01:20:48,275 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:20:48,276 [    INFO] {}
+2019-06-24 01:20:48,277 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:20:48,277 [    INFO] {}
+2019-06-24 01:20:48,278 [    INFO] BEGIN (implicit)
+2019-06-24 01:20:48,280 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:20:48,280 [    INFO] {'request_nonce': '20190624012048', 'last': 1145000.0, 'bid': 1144409.0, 'ask': 1145000.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5149.41012442, 'timestamp': 1561306846, 'server_nonce': '20190624012046', 'index_price': 1144704.5, 'created_at': '2019-06-24 01:20:48'}
+2019-06-24 01:20:48,283 [    INFO] COMMIT
+2019-06-24 01:20:48,286 [    INFO] BEGIN (implicit)
+2019-06-24 01:20:48,287 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:20:48,287 [    INFO] {'param_1': 30}
+2019-06-24 01:20:48,291 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:20:48,292 [    INFO] {'server_nonce': '20190624012046', 'index_price': 1144704.5, 'short_ema': 1144819.1257873036, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:20:48'}
+2019-06-24 01:20:48,294 [    INFO] COMMIT
+2019-06-24 01:20:56,437 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:20:56,437 [    INFO] {}
+2019-06-24 01:20:56,440 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:20:56,440 [    INFO] {}
+2019-06-24 01:20:56,443 [    INFO] SELECT DATABASE()
+2019-06-24 01:20:56,443 [    INFO] {}
+2019-06-24 01:20:56,444 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:20:56,445 [    INFO] {}
+2019-06-24 01:20:56,448 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:20:56,448 [    INFO] {}
+2019-06-24 01:20:56,449 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:20:56,450 [    INFO] {}
+2019-06-24 01:20:56,450 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:20:56,450 [    INFO] {}
+2019-06-24 01:20:56,452 [    INFO] BEGIN (implicit)
+2019-06-24 01:20:56,453 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:20:56,453 [    INFO] {'request_nonce': '20190624012056', 'last': 1145000.0, 'bid': 1144409.0, 'ask': 1145000.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5149.41012442, 'timestamp': 1561306846, 'server_nonce': '20190624012046', 'index_price': 1144704.5, 'created_at': '2019-06-24 01:20:56'}
+2019-06-24 01:20:56,456 [    INFO] COMMIT
+2019-06-24 01:20:56,460 [    INFO] BEGIN (implicit)
+2019-06-24 01:20:56,461 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:20:56,462 [    INFO] {'param_1': 30}
+2019-06-24 01:20:56,465 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:20:56,465 [    INFO] {'server_nonce': '20190624012046', 'index_price': 1144704.5, 'short_ema': 1144663.6486899282, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:20:56'}
+2019-06-24 01:20:56,472 [    INFO] COMMIT
+2019-06-24 01:20:58,553 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:20:58,554 [    INFO] {}
+2019-06-24 01:20:58,557 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:20:58,557 [    INFO] {}
+2019-06-24 01:20:58,560 [    INFO] SELECT DATABASE()
+2019-06-24 01:20:58,560 [    INFO] {}
+2019-06-24 01:20:58,561 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:20:58,561 [    INFO] {}
+2019-06-24 01:20:58,565 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:20:58,565 [    INFO] {}
+2019-06-24 01:20:58,566 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:20:58,566 [    INFO] {}
+2019-06-24 01:20:58,567 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:20:58,567 [    INFO] {}
+2019-06-24 01:20:58,568 [    INFO] BEGIN (implicit)
+2019-06-24 01:20:58,570 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:20:58,570 [    INFO] {'request_nonce': '20190624012058', 'last': 1144998.0, 'bid': 1144553.0, 'ask': 1145000.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5150.13543402, 'timestamp': 1561306855, 'server_nonce': '20190624012055', 'index_price': 1144776.5, 'created_at': '2019-06-24 01:20:58'}
+2019-06-24 01:20:58,573 [    INFO] COMMIT
+2019-06-24 01:20:58,577 [    INFO] BEGIN (implicit)
+2019-06-24 01:20:58,578 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:20:58,578 [    INFO] {'param_1': 30}
+2019-06-24 01:20:58,582 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:20:58,582 [    INFO] {'server_nonce': '20190624012055', 'index_price': 1144776.5, 'short_ema': 1144667.5150726167, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:20:58'}
+2019-06-24 01:20:58,588 [    INFO] COMMIT
+2019-06-24 01:21:00,822 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:21:00,823 [    INFO] {}
+2019-06-24 01:21:00,827 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:21:00,828 [    INFO] {}
+2019-06-24 01:21:00,833 [    INFO] SELECT DATABASE()
+2019-06-24 01:21:00,833 [    INFO] {}
+2019-06-24 01:21:00,835 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:21:00,835 [    INFO] {}
+2019-06-24 01:21:00,841 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:00,842 [    INFO] {}
+2019-06-24 01:21:00,844 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:00,845 [    INFO] {}
+2019-06-24 01:21:00,847 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:21:00,847 [    INFO] {}
+2019-06-24 01:21:00,848 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:00,850 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:21:00,851 [    INFO] {'request_nonce': '20190624012100', 'last': 1144998.0, 'bid': 1144553.0, 'ask': 1145000.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5150.13543402, 'timestamp': 1561306855, 'server_nonce': '20190624012055', 'index_price': 1144776.5, 'created_at': '2019-06-24 01:21:00'}
+2019-06-24 01:21:00,863 [    INFO] COMMIT
+2019-06-24 01:21:00,867 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:00,868 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:21:00,869 [    INFO] {'param_1': 30}
+2019-06-24 01:21:00,873 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:21:00,873 [    INFO] {'server_nonce': '20190624012055', 'index_price': 1144776.5, 'short_ema': 1144693.0211780712, 'long_ema': 0, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:21:00'}
+2019-06-24 01:21:00,875 [    INFO] COMMIT
+2019-06-24 01:21:03,072 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:21:03,072 [    INFO] {}
+2019-06-24 01:21:03,077 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:21:03,077 [    INFO] {}
+2019-06-24 01:21:03,082 [    INFO] SELECT DATABASE()
+2019-06-24 01:21:03,082 [    INFO] {}
+2019-06-24 01:21:03,084 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:21:03,084 [    INFO] {}
+2019-06-24 01:21:03,087 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:03,088 [    INFO] {}
+2019-06-24 01:21:03,088 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:03,089 [    INFO] {}
+2019-06-24 01:21:03,089 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:21:03,090 [    INFO] {}
+2019-06-24 01:21:03,091 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:03,093 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:21:03,093 [    INFO] {'request_nonce': '20190624012102', 'last': 1144998.0, 'bid': 1144553.0, 'ask': 1145000.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5150.13543402, 'timestamp': 1561306855, 'server_nonce': '20190624012055', 'index_price': 1144776.5, 'created_at': '2019-06-24 01:21:03'}
+2019-06-24 01:21:03,096 [    INFO] COMMIT
+2019-06-24 01:21:03,099 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:03,101 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:21:03,106 [    INFO] {'param_1': 30}
+2019-06-24 01:21:03,110 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:21:03,110 [    INFO] {'server_nonce': '20190624012055', 'index_price': 1144776.5, 'short_ema': 1144723.9523819962, 'long_ema': 1144291.3525909635, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:21:03'}
+2019-06-24 01:21:03,112 [    INFO] COMMIT
+2019-06-24 01:21:05,405 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:21:05,405 [    INFO] {}
+2019-06-24 01:21:05,408 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:21:05,408 [    INFO] {}
+2019-06-24 01:21:05,411 [    INFO] SELECT DATABASE()
+2019-06-24 01:21:05,411 [    INFO] {}
+2019-06-24 01:21:05,412 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:21:05,412 [    INFO] {}
+2019-06-24 01:21:05,416 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:05,416 [    INFO] {}
+2019-06-24 01:21:05,417 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:05,417 [    INFO] {}
+2019-06-24 01:21:05,418 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:21:05,418 [    INFO] {}
+2019-06-24 01:21:05,419 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:05,421 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:21:05,421 [    INFO] {'request_nonce': '20190624012105', 'last': 1145000.0, 'bid': 1144497.0, 'ask': 1145000.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5150.34043402, 'timestamp': 1561306863, 'server_nonce': '20190624012103', 'index_price': 1144748.5, 'created_at': '2019-06-24 01:21:05'}
+2019-06-24 01:21:05,424 [    INFO] COMMIT
+2019-06-24 01:21:05,427 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:05,429 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:21:05,429 [    INFO] {'param_1': 30}
+2019-06-24 01:21:05,433 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:21:05,438 [    INFO] {'server_nonce': '20190624012103', 'index_price': 1144748.5, 'short_ema': 1144718.7739503337, 'long_ema': 1144290.7746678048, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:21:05'}
+2019-06-24 01:21:05,439 [    INFO] COMMIT
+2019-06-24 01:21:07,693 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:21:07,693 [    INFO] {}
+2019-06-24 01:21:07,698 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:21:07,698 [    INFO] {}
+2019-06-24 01:21:07,703 [    INFO] SELECT DATABASE()
+2019-06-24 01:21:07,703 [    INFO] {}
+2019-06-24 01:21:07,705 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:21:07,705 [    INFO] {}
+2019-06-24 01:21:07,712 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:07,712 [    INFO] {}
+2019-06-24 01:21:07,714 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:07,714 [    INFO] {}
+2019-06-24 01:21:07,715 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:21:07,716 [    INFO] {}
+2019-06-24 01:21:07,717 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:07,719 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:21:07,719 [    INFO] {'request_nonce': '20190624012107', 'last': 1145000.0, 'bid': 1144497.0, 'ask': 1145000.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5150.34043402, 'timestamp': 1561306863, 'server_nonce': '20190624012103', 'index_price': 1144748.5, 'created_at': '2019-06-24 01:21:07'}
+2019-06-24 01:21:07,721 [    INFO] COMMIT
+2019-06-24 01:21:07,725 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:07,726 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:21:07,726 [    INFO] {'param_1': 30}
+2019-06-24 01:21:07,731 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:21:07,731 [    INFO] {'server_nonce': '20190624012103', 'index_price': 1144748.5, 'short_ema': 1144716.4636307103, 'long_ema': 1144273.7164095282, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:21:07'}
+2019-06-24 01:21:07,733 [    INFO] COMMIT
+2019-06-24 01:21:10,556 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:21:10,556 [    INFO] {}
+2019-06-24 01:21:10,559 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:21:10,559 [    INFO] {}
+2019-06-24 01:21:10,562 [    INFO] SELECT DATABASE()
+2019-06-24 01:21:10,562 [    INFO] {}
+2019-06-24 01:21:10,563 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:21:10,563 [    INFO] {}
+2019-06-24 01:21:10,567 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:10,567 [    INFO] {}
+2019-06-24 01:21:10,568 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:10,568 [    INFO] {}
+2019-06-24 01:21:10,569 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:21:10,569 [    INFO] {}
+2019-06-24 01:21:10,570 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:10,572 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:21:10,572 [    INFO] {'request_nonce': '20190624012110', 'last': 1145000.0, 'bid': 1144497.0, 'ask': 1145000.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5150.34043402, 'timestamp': 1561306863, 'server_nonce': '20190624012103', 'index_price': 1144748.5, 'created_at': '2019-06-24 01:21:10'}
+2019-06-24 01:21:10,575 [    INFO] COMMIT
+2019-06-24 01:21:10,577 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:10,579 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:21:10,579 [    INFO] {'param_1': 30}
+2019-06-24 01:21:10,583 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:21:10,583 [    INFO] {'server_nonce': '20190624012103', 'index_price': 1144748.5, 'short_ema': 1144719.443280147, 'long_ema': 1144271.1470201772, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:21:10'}
+2019-06-24 01:21:10,591 [    INFO] COMMIT
+2019-06-24 01:21:12,748 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:21:12,749 [    INFO] {}
+2019-06-24 01:21:12,752 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:21:12,752 [    INFO] {}
+2019-06-24 01:21:12,755 [    INFO] SELECT DATABASE()
+2019-06-24 01:21:12,755 [    INFO] {}
+2019-06-24 01:21:12,756 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:21:12,756 [    INFO] {}
+2019-06-24 01:21:12,760 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:12,760 [    INFO] {}
+2019-06-24 01:21:12,761 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:21:12,761 [    INFO] {}
+2019-06-24 01:21:12,762 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:21:12,762 [    INFO] {}
+2019-06-24 01:21:12,763 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:12,765 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:21:12,765 [    INFO] {'request_nonce': '20190624012112', 'last': 1145000.0, 'bid': 1144497.0, 'ask': 1145000.0, 'high': 1181640.0, 'low': 1112000.0, 'volume': 5150.34043402, 'timestamp': 1561306863, 'server_nonce': '20190624012103', 'index_price': 1144748.5, 'created_at': '2019-06-24 01:21:12'}
+2019-06-24 01:21:12,768 [    INFO] COMMIT
+2019-06-24 01:21:12,772 [    INFO] BEGIN (implicit)
+2019-06-24 01:21:12,773 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:21:12,773 [    INFO] {'param_1': 30}
+2019-06-24 01:21:12,777 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:21:12,777 [    INFO] {'server_nonce': '20190624012103', 'index_price': 1144748.5, 'short_ema': 1144725.0630643629, 'long_ema': 1144280.2735961664, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:21:12'}
+2019-06-24 01:21:12,784 [    INFO] COMMIT
+2019-06-24 01:31:09,081 [    INFO] SHOW VARIABLES LIKE 'sql_mode'
+2019-06-24 01:31:09,082 [    INFO] {}
+2019-06-24 01:31:09,086 [    INFO] SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-06-24 01:31:09,087 [    INFO] {}
+2019-06-24 01:31:09,091 [    INFO] SELECT DATABASE()
+2019-06-24 01:31:09,091 [    INFO] {}
+2019-06-24 01:31:09,092 [    INFO] show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-06-24 01:31:09,092 [    INFO] {}
+2019-06-24 01:31:09,096 [    INFO] SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:31:09,096 [    INFO] {}
+2019-06-24 01:31:09,097 [    INFO] SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-06-24 01:31:09,097 [    INFO] {}
+2019-06-24 01:31:09,098 [    INFO] SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-06-24 01:31:09,098 [    INFO] {}
+2019-06-24 01:31:09,099 [    INFO] BEGIN (implicit)
+2019-06-24 01:31:09,101 [    INFO] INSERT INTO coincheck_ticker (request_nonce, last, bid, ask, high, low, volume, timestamp, server_nonce, index_price, created_at) VALUES (%(request_nonce)s, %(last)s, %(bid)s, %(ask)s, %(high)s, %(low)s, %(volume)s, %(timestamp)s, %(server_nonce)s, %(index_price)s, %(created_at)s)
+2019-06-24 01:31:09,101 [    INFO] {'request_nonce': '20190624013108', 'last': 1148003.0, 'bid': 1148016.0, 'ask': 1148999.0, 'high': 1180433.0, 'low': 1112000.0, 'volume': 5140.4476583, 'timestamp': 1561307462, 'server_nonce': '20190624013102', 'index_price': 1148507.5, 'created_at': '2019-06-24 01:31:09'}
+2019-06-24 01:31:09,102 [    INFO] COMMIT
+2019-06-24 01:31:09,106 [    INFO] BEGIN (implicit)
+2019-06-24 01:31:09,107 [    INFO] SELECT coincheck_6tema_16dema.id AS coincheck_6tema_16dema_id, coincheck_6tema_16dema.server_nonce AS coincheck_6tema_16dema_server_nonce, coincheck_6tema_16dema.index_price AS coincheck_6tema_16dema_index_price, coincheck_6tema_16dema.short_ema AS coincheck_6tema_16dema_short_ema, coincheck_6tema_16dema.long_ema AS coincheck_6tema_16dema_long_ema, coincheck_6tema_16dema.gcross AS coincheck_6tema_16dema_gcross, coincheck_6tema_16dema.dcross AS coincheck_6tema_16dema_dcross, coincheck_6tema_16dema.created_at AS coincheck_6tema_16dema_created_at 
+FROM coincheck_6tema_16dema ORDER BY coincheck_6tema_16dema.id DESC 
+ LIMIT %(param_1)s
+2019-06-24 01:31:09,114 [    INFO] {'param_1': 30}
+2019-06-24 01:31:09,118 [    INFO] INSERT INTO coincheck_6tema_16dema (server_nonce, index_price, short_ema, long_ema, gcross, dcross, created_at) VALUES (%(server_nonce)s, %(index_price)s, %(short_ema)s, %(long_ema)s, %(gcross)s, %(dcross)s, %(created_at)s)
+2019-06-24 01:31:09,118 [    INFO] {'server_nonce': '20190624013102', 'index_price': 1148507.5, 'short_ema': 1147084.3269344582, 'long_ema': 1145153.7137413707, 'gcross': 0, 'dcross': 0, 'created_at': '2019-06-24 01:31:09'}
+2019-06-24 01:31:09,121 [    INFO] COMMIT

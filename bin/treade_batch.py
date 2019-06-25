@@ -91,6 +91,9 @@ def update_close_data(coincheck, session, tread_history):
     tread_history.updated_at(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     session.commit()
 
+def finish_logger(logger, message):
+    logger.info("{0}".format(message))
+    logger.info("=== trade_batch finish ===")
 
 if __name__ == "__main__" :
 
@@ -101,8 +104,7 @@ if __name__ == "__main__" :
     
     ### プロセスがないか確認する
     if (os.path.exists("treade_process.txt")):
-        logger.info("Exist process")
-        logger.info("=== trade_batch finish ===")
+        finish_logger(logger, "Exist process")
         sys.exit(1)
 
     ### プロセス起動中ファイルを作成
@@ -117,6 +119,9 @@ if __name__ == "__main__" :
     
         ### ポジションを持っていない & Gクロスしていた場合
         if (len(position) == 0) & signal["gcross"]:
+        
+            logger.info("Gcross & buy order")
+            
             # bidの値を取得
             ticker_info = get_tciker_info(coincheck)
             ticker_bid = ticker_info["bid"]
@@ -140,16 +145,21 @@ if __name__ == "__main__" :
                 tread_history.status("not_position")
                 tread_history.updated_at(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
                 session.commit()
+            
+                finish_logger(logger, "Not Position")
                 sys.exit(1)
             
             # takeされた場合
             else:
                 update_open_data(coincheck, session, tread_history)
+                finish_logger(logger, "Open position")
                 sys.exit(1)
     
         ### ポジションを持っている & Dクロスしていた場合
         if (len(position) == 1) & signal["dcross"]:
 
+            logger.info("Dcross & sell order")
+            
             # 変数をセット
             for p in position:
                 tread_history = p
@@ -173,14 +183,17 @@ if __name__ == "__main__" :
                 # takeされなかったのでキャンセル
                 if len(open_orders) == 1:
                     cancel_order(coincheck, order_id)
+                    logger.info("Can not sell order")
                 
                 # takeされた場合
                 else:
                     update_close_data(coincheck, session, tread_history)
                     order_flg = False
+                    finish_logger(logger, "Close  position")
                     sys.exit(1)
+
+    # キャッチして例外をログに記録
     except Exception as e:
-        # キャッチして例外をログに記録
         logger.exception(e)
         sys.exit(1)
 

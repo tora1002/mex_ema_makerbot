@@ -86,8 +86,8 @@ if __name__ == "__main__" :
         
         logger.info("=== make_index_batch finish ===")
 
+    # キャッチして例外をログに記録
     except Exception as e:
-        # キャッチして例外をログに記録
         logger.exception(e)
         sys.exit(1)
 

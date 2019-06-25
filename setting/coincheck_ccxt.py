@@ -25,3 +25,4 @@ coincheck = ccxt.coincheck({
     "secret" : API_SECRET
 })
 
+

@@ -3,13 +3,11 @@ import sys
 from datetime import datetime
 from sqlalchemy import Column, BIGINT, DECIMAL, DATETIME 
 
-# set home directory
+# 親ディレクトリの設定
 app_home = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".." ))
 
-# set models path
+# パス / 設定系の読み込み
 sys.path.append(os.path.join(app_home, "setting"))
-
-# road settings
 from db_setting import ENGINE, Base
 
 class CoincheckTicker(Base):
@@ -31,7 +29,27 @@ class CoincheckTicker(Base):
     server_nonce = Column(BIGINT, nullable = True)
     index_price = Column(DECIMAL, nullable = True)
     created_at = Column(DATETIME, nullable = True)
- 
+
+    ##### insert
+    def insert(session, request_nonce, ticker_info, index_price):
+        session.add(
+            CoincheckTicker(
+                request_nonce = request_nonce,
+                last = ticker_info["last"],
+                bid = ticker_info["bid"],
+                ask = ticker_info["ask"],
+                high = ticker_info["high"],
+                low = ticker_info["low"],
+                volume = ticker_info["volume"],
+                timestamp = ticker_info["timestamp"],
+                server_nonce = datetime.fromtimestamp(ticker_info["timestamp"]).strftime("%Y%m%d%H%M%S"),
+                index_price = index_price,
+                created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            )
+        )
+        session.commit()
+
+
 def main(args):
     Base.metadata.create_all(bind = ENGINE)
 

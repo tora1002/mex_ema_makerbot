@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-# fixed variable
+# 固定変数
 dialect = "mysql"
 driver = "pymysql"
 username = "root"
@@ -12,14 +12,13 @@ database = "crypto_databases"
 charset_type = "utf8"
 db_url = f"{dialect}+{driver}://{username}:{password}@{host}/{database}?charset={charset_type}"
 
-# engine instance for db
 #ENGINE = create_engine(db_url, echo=True)
 ENGINE = create_engine(db_url, echo=False)
 
-# make session
+# session作成
 Session = sessionmaker(bind = ENGINE)
 session = Session()
 
-# make base model
+# Baseモデルの作成
 Base = declarative_base()
 

@@ -36,7 +36,7 @@ if __name__ == "__main__" :
         request_nonce = datetime.now().strftime("%Y%m%d%H%M%S")
 
         ### get ticker data from api & make index_price
-        ticker = coincheck.fetch_ticker('BTC/JPY')
+        ticker = coincheck.fetch_ticker("BTC/JPY")
         ticker_info = ticker["info"]
         index_price = (ticker_info["ask"] +ticker_info["bid"])/2
 

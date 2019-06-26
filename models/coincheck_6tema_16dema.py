@@ -1,7 +1,7 @@
 import os
 import sys
 from datetime import datetime
-from sqlalchemy import Column, BIGINT, DECIMAL, DATETIME, BOOLEAN 
+from sqlalchemy import Column, BIGINT, DECIMAL, DATETIME, BOOLEAN, desc
 
 # 親ディレクトリの設定
 app_home = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".." ))
@@ -31,7 +31,7 @@ class Coincheck6tema16dema(Base):
         return session.query(Coincheck6tema16dema).order_by(desc(Coincheck6tema16dema.id)).limit(limit_num).all()
 
     ##### insert
-    def insert(session, ticker_timestamp, index_price, short_ema, long_ema, gcross, dcross)
+    def insert(session, ticker_timestamp, index_price, short_ema, long_ema, gcross, dcross):
         session.add(
             Coincheck6tema16dema(
                 server_nonce = datetime.fromtimestamp(ticker_timestamp).strftime("%Y%m%d%H%M%S"),

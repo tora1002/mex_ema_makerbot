@@ -7,7 +7,6 @@ from datetime import datetime
 import talib
 import numpy as np
 import pymysql.cursors
-from sqlalchemy import desc
 
 # 親ディレクトリの設定
 app_home = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".." ))
@@ -44,7 +43,7 @@ if __name__ == "__main__" :
         CoincheckTicker.insert(session, request_nonce, ticker_info, index_price)
 
         ### emaデータを取得
-        indexs_desc = Coincheck6tema16dema.get_limit_record_order_desc(30)
+        indexs_desc = Coincheck6tema16dema.get_limit_record_order_desc(session, 30)
         
         ### 取得したデータを元に、emaデータを加工
         short_index_list = []

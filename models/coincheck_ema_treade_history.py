@@ -28,12 +28,9 @@ class CoincheckEmaTreadeHistory(Base):
     status = Column(VARCHAR(20), nullable = True)
     created_at = Column(DATETIME, nullable = True)
 
-
     ### select
     def get_record_filter_status(session, status):
         return session.query(CoincheckEmaTreadeHistory).filter_by(status = status).all()
-
-
 
     ### insert
     def first_insert(session, request_nonce, amount, order_id):
@@ -50,7 +47,6 @@ class CoincheckEmaTreadeHistory(Base):
         session.commit()
 
         return tread_history
-
 
 def main(args):
     Base.metadata.create_all(bind = ENGINE)

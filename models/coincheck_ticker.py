@@ -49,7 +49,6 @@ class CoincheckTicker(Base):
         )
         session.commit()
 
-
 def main(args):
     Base.metadata.create_all(bind = ENGINE)
 

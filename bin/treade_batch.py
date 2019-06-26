@@ -22,10 +22,10 @@ from logger import logger
 from coincheck_ccxt import coincheck
 
 def get_signal(session):
-    signal = []
+    signal = {}
     index_desc = Coincheck6tema16dema.get_limit_record_order_desc(session, 1)
         
-    for index in index_obj:
+    for index in index_desc:
         signal["gcross"] = index.gcross
         signal["dcross"] = index.dcross
 
@@ -112,10 +112,10 @@ if __name__ == "__main__" :
 
     try:
         ### 最新のシグナルを取得
-        signal = Coincheck6tema16dema.get_limit_record_order_desc(session, 1)
+        signal = get_signal(session)
     
         ### ポジションを持っているか？
-        position = CoincheckEmaTreadeHistory.get_record_filter_status(session, "open")
+        position = get_position(session)
     
         ### ポジションを持っていない & Gクロスしていた場合
         if (len(position) == 0) & signal["gcross"]:
@@ -199,4 +199,7 @@ if __name__ == "__main__" :
 
     ### プロセス終了のため、ファイルを削除
     os.remove("treade_process.txt")
+    logger.info("=== trade_batch finish ===")
+
+
 

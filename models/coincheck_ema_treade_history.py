@@ -20,24 +20,27 @@ class CoincheckEmaTreadeHistory(Base):
     id = Column(BIGINT, primary_key = True, nullable = True)
     order_request_nonce = Column(BIGINT, nullable = True)
     amount = Column(DECIMAL, nullable = True)
-    order_id = Column(BIGINT, nullable = True)
+    status = Column(VARCHAR(20), nullable = True)
+    open_order_id = Column(BIGINT, nullable = True)
     open_time = Column(DATETIME)
     open_rate = Column(DECIMAL)
+    close_order_id = Column(BIGINT)
     close_time = Column(DATETIME)
     close_rate = Column(DECIMAL)
-    status = Column(VARCHAR(20), nullable = True)
+    profit = Column(BIGINT)
     created_at = Column(DATETIME, nullable = True)
+    updated_at = Column(DATETIME, nullable = True)
 
     ### select
-    def get_record_filter_status(session, status):
-        return session.query(CoincheckEmaTreadeHistory).filter_by(status = status).all()
+    def get_record_filter_status(session, postion_status):
+        return session.query(CoincheckEmaTreadeHistory).filter_by(status = postion_status).all()
 
     ### insert
     def first_insert(session, request_nonce, amount, order_id):
-        tread_history = session.add(
-            Coincheck6tema16dema(
+        session.add(
+            CoincheckEmaTreadeHistory(
                 order_request_nonce = request_nonce,
-                amount = tread_amount,
+                amount = amount,
                 order_id = order_id,
                 status = "request",
                 created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -45,8 +48,6 @@ class CoincheckEmaTreadeHistory(Base):
             )
         )
         session.commit()
-
-        return tread_history
 
 def main(args):
     Base.metadata.create_all(bind = ENGINE)

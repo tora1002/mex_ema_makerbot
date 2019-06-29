@@ -2,6 +2,7 @@
 import sys
 import os
 from time import sleep
+from datetime import datetime
 from pathlib import Path
 import pymysql.cursors
 from sqlalchemy import desc
@@ -31,8 +32,8 @@ def get_signal(session):
 
     return signal
 
-def get_position(session):
-    position = CoincheckEmaTreadeHistory.get_record_filter_status(session, "open")
+def get_position(session, position_status):
+    position = CoincheckEmaTreadeHistory.get_record_filter_status(session, position_status)
 
     ### ポジションが1つ以上存在する
     if len(position) > 1:
@@ -61,50 +62,29 @@ def get_open_orders(coincheck):
     return open_orders
 
 def cancel_order(coincheck, order_id):
+    sleep(0.01)
     coincheck.cancel_order(order_id)
+    #TODO cancel エラーになった場合はどするか？
 
-def update_open_data(coincheck, session, tread_history):
-    orders = coincheck.fetch_my_trades()
-
-    for order in orders:
-        if order["order_id"] == order_id:
-            open_time = order["created_at"]
-            open_rate = order["rate"]
-
-    tread_history.open_time(open_time)
-    tread_history.open_rate(open_rate)
-    tread_history.status("open")
-    tread_history.updated_at(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+def update_status(session, position_status):
+    tread_history.status = position_status
+    tread_history.updated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     session.commit()
+    
 
-def update_close_data(coincheck, session, tread_history):
-    orders = coincheck.fetch_my_trades()
-
-    for order in orders:
-        if order["order_id"] == order_id:
-            open_time = order["created_at"]
-            open_rate = order["rate"]
-
-    tread_history.close_time(close_time)
-    tread_history.close_rate(close_rate)
-    tread_history.status("close")
-    tread_history.updated_at(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-    session.commit()
-
-def finish_logger(logger, message):
-    logger.info("{0}".format(message))
-    logger.info("=== trade_batch finish ===")
 
 if __name__ == "__main__" :
 
-    #TODO いつか変数化する
-    tread_amount = 0.01
+    #TODO 変数化する
+    # 最低購入金額0.005BTC（いずれレバレッジにした方が良い？）
+    tread_amount = 0.005
 
     logger.info("=== trade_batch start ===")
     
     ### プロセスがないか確認する
     if (os.path.exists("treade_process.txt")):
-        finish_logger(logger, "Exist process")
+        logger.info("Exist process")
+        logger.info("=== trade_batch finish ===")
         sys.exit(1)
 
     ### プロセス起動中ファイルを作成
@@ -115,10 +95,11 @@ if __name__ == "__main__" :
         signal = get_signal(session)
     
         ### ポジションを持っているか？
-        position = get_position(session)
-    
+        position = get_position(session, "open")
+        
         ### ポジションを持っていない & Gクロスしていた場合
-        if (len(position) == 0) & signal["gcross"]:
+        #if (len(position) == 0) & signal["gcross"]:
+        if (len(position) == 0):
         
             logger.info("Gcross & buy order")
             
@@ -128,32 +109,32 @@ if __name__ == "__main__" :
 
             # 注文
             request_nonce = datetime.now().strftime("%Y%m%d%H%M%S")
-            res = create_order(coincheck, side = "buy", amount = tread_amount, price = ticker_bid)
+            res = create_order(coincheck, side = "buy", amount = tread_amount, price = ticker_bid-1)
+
+            print(res)
 
             order_id = res["id"]
-            tread_history = CoincheckEmaTreadeHistory.first_insert(session, request_nonce, amount, order_id)
+            CoincheckEmaTreadeHistory.first_insert(session, request_nonce, tread_amount, order_id)
 
             sleep(1)
 
             # 未決済のポジションを全て取得 
             open_orders = get_open_orders(coincheck)
+            tread_history_list = get_position(session, "request")
+
+            for obj in tread_history_list:
+                tread_history = obj
 
             # takeされなかったのでキャンセル & data更新
             if len(open_orders) == 1:
                 cancel_order(coincheck, order_id)
-                
-                tread_history.status("not_position")
-                tread_history.updated_at(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-                session.commit()
-            
-                finish_logger(logger, "Not Position")
-                sys.exit(1)
+                update_status(session, "not_position") 
+                logger.info("Not Position")
             
             # takeされた場合
             else:
-                update_open_data(coincheck, session, tread_history)
-                finish_logger(logger, "Open position")
-                sys.exit(1)
+                update_status(session, "open") 
+                logger.info("Open Position")
     
         ### ポジションを持っている & Dクロスしていた場合
         if (len(position) == 1) & signal["dcross"]:
@@ -172,7 +153,7 @@ if __name__ == "__main__" :
                 ticker_info = get_tciker_info(coincheck)
                 ticker_ask = ticker_info["ask"]
 
-                res = create_order(coincheck, side = "sell", amount = tread_amount, price = ticker_ask)
+                res = create_order(coincheck, side = "sell", amount = tread_amount, price = ticker_ask+1)
                 order_id = res["id"]
 
                 sleep(1)
@@ -187,10 +168,9 @@ if __name__ == "__main__" :
                 
                 # takeされた場合
                 else:
-                    update_close_data(coincheck, session, tread_history)
+                    update_status(session, "close")
                     order_flg = False
-                    finish_logger(logger, "Close  position")
-                    sys.exit(1)
+                    logger.info("Close  position")
 
     # キャッチして例外をログに記録
     except Exception as e:
@@ -200,6 +180,4 @@ if __name__ == "__main__" :
     ### プロセス終了のため、ファイルを削除
     os.remove("treade_process.txt")
     logger.info("=== trade_batch finish ===")
-
-
 

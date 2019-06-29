@@ -25,4 +25,12 @@ coincheck = ccxt.coincheck({
     "secret" : API_SECRET
 })
 
+class coincheck(Exchange):
+
+    def nonce(self):
+        return self.microseconds()
+
+
+
+
 

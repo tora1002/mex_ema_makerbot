@@ -63,11 +63,28 @@ def cancel_order(coincheck, order_id):
     coincheck.cancel_order(order_id)
     #TODO cancel エラーになった場合はどするか？
 
+def insert_trade_history(session, request_nonce, amount, order_id):
+    session.add(
+        CoincheckEmaTradeHistory(
+            order_request_nonce = request_nonce,
+            amount = amount,
+            status = "request",
+            open_order_id = order_id,
+            created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            updated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        )
+    )
+    session.commit()
+
+def update_status_close(session, trade_history, order_id):
+    trade_history.status = "close"
+    trade_history.close_order_id = order_id
+    trade_history.updated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
 def update_status(session, trade_history, position_status):
     trade_history.status = position_status
     trade_history.updated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     session.commit()
-    
 
 if __name__ == "__main__" :
 
@@ -95,7 +112,7 @@ if __name__ == "__main__" :
         
         ### ポジションを持っていない & Gクロスしていた場合
         #if (len(position) == 0) & signal["gcross"]:
-        if (len(position) == 0):
+        if True:
         
             logger.info("Gcross & buy order")
             
@@ -110,7 +127,7 @@ if __name__ == "__main__" :
             print(res)
 
             order_id = res["id"]
-            CoincheckEmaTradeHistory.first_insert(session, request_nonce, trade_amount, order_id)
+            insert_trade_history(session, request_nonce, trade_amount, order_id)
 
             sleep(1)
 
@@ -134,6 +151,7 @@ if __name__ == "__main__" :
     
         ### ポジションを持っている & Dクロスしていた場合
         if (len(position) == 1) & signal["dcross"]:
+        #if True:
 
             logger.info("Dcross & sell order")
             
@@ -164,7 +182,7 @@ if __name__ == "__main__" :
                 
                 # takeされた場合
                 else:
-                    update_status(session, trade_history, "close")
+                    update_status_close(session, trade_history, order_id)
                     order_flg = False
                     logger.info("Close  position")
 

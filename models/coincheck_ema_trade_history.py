@@ -35,20 +35,6 @@ class CoincheckEmaTradeHistory(Base):
     def get_record_filter_status(session, postion_status):
         return session.query(CoincheckEmaTradeHistory).filter_by(status = postion_status).all()
 
-    ### insert
-    def first_insert(session, request_nonce, amount, order_id):
-        session.add(
-            CoincheckEmaTradeHistory(
-                order_request_nonce = request_nonce,
-                amount = amount,
-                order_id = order_id,
-                status = "request",
-                created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                updated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            )
-        )
-        session.commit()
-
 def main(args):
     Base.metadata.create_all(bind = ENGINE)
 

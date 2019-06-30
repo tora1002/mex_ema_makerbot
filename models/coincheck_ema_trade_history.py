@@ -10,12 +10,12 @@ app_home = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__
 sys.path.append(os.path.join(app_home, "setting"))
 from db_setting import ENGINE, Base
 
-class CoincheckEmaTreadeHistory(Base):
+class CoincheckEmaTradeHistory(Base):
 
     """
-    CoincheckEmaTreadeHistory
+    CoincheckEmaTradeHistory
     """
-    __tablename__ = "coincheck_ema_treade_history"
+    __tablename__ = "coincheck_ema_trade_history"
  
     id = Column(BIGINT, primary_key = True, nullable = True)
     order_request_nonce = Column(BIGINT, nullable = True)
@@ -33,12 +33,12 @@ class CoincheckEmaTreadeHistory(Base):
 
     ### select
     def get_record_filter_status(session, postion_status):
-        return session.query(CoincheckEmaTreadeHistory).filter_by(status = postion_status).all()
+        return session.query(CoincheckEmaTradeHistory).filter_by(status = postion_status).all()
 
     ### insert
     def first_insert(session, request_nonce, amount, order_id):
         session.add(
-            CoincheckEmaTreadeHistory(
+            CoincheckEmaTradeHistory(
                 order_request_nonce = request_nonce,
                 amount = amount,
                 order_id = order_id,

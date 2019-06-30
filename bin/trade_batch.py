@@ -7,17 +7,14 @@ from pathlib import Path
 import pymysql.cursors
 from sqlalchemy import desc
 
-# 親ディレクトリの設定
+# 親ディレクトリの設定、パスの読み込み
 app_home = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".." ))
-
-# パスの読み込み
 sys.path.append(os.path.join(app_home, "models"))
 sys.path.append(os.path.join(app_home, "setting"))
 
 # モジュール、設定系の読み込み
-from coincheck_ticker import CoincheckTicker
 from coincheck_6tema_16dema import Coincheck6tema16dema
-from coincheck_ema_treade_history import CoincheckEmaTreadeHistory
+from coincheck_ema_trade_history import CoincheckEmaTradeHistory
 from db_setting import session
 from logger import logger
 from coincheck_ccxt import coincheck
@@ -33,7 +30,7 @@ def get_signal(session):
     return signal
 
 def get_position(session, position_status):
-    position = CoincheckEmaTreadeHistory.get_record_filter_status(session, position_status)
+    position = CoincheckEmaTradeHistory.get_record_filter_status(session, position_status)
 
     ### ポジションが1つ以上存在する
     if len(position) > 1:
@@ -66,29 +63,28 @@ def cancel_order(coincheck, order_id):
     coincheck.cancel_order(order_id)
     #TODO cancel エラーになった場合はどするか？
 
-def update_status(session, position_status):
-    tread_history.status = position_status
-    tread_history.updated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+def update_status(session, trade_history, position_status):
+    trade_history.status = position_status
+    trade_history.updated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     session.commit()
     
-
 
 if __name__ == "__main__" :
 
     #TODO 変数化する
     # 最低購入金額0.005BTC（いずれレバレッジにした方が良い？）
-    tread_amount = 0.005
+    trade_amount = 0.005
 
     logger.info("=== trade_batch start ===")
     
     ### プロセスがないか確認する
-    if (os.path.exists("treade_process.txt")):
+    if (os.path.exists("trade_process.txt")):
         logger.info("Exist process")
         logger.info("=== trade_batch finish ===")
         sys.exit(1)
 
     ### プロセス起動中ファイルを作成
-    Path("treade_process.txt").touch()
+    Path("trade_process.txt").touch()
 
     try:
         ### 最新のシグナルを取得
@@ -109,26 +105,26 @@ if __name__ == "__main__" :
 
             # 注文
             request_nonce = datetime.now().strftime("%Y%m%d%H%M%S")
-            res = create_order(coincheck, side = "buy", amount = tread_amount, price = ticker_bid-1)
+            res = create_order(coincheck, side = "buy", amount = trade_amount, price = ticker_bid-1)
 
             print(res)
 
             order_id = res["id"]
-            CoincheckEmaTreadeHistory.first_insert(session, request_nonce, tread_amount, order_id)
+            CoincheckEmaTradeHistory.first_insert(session, request_nonce, trade_amount, order_id)
 
             sleep(1)
 
             # 未決済のポジションを全て取得 
             open_orders = get_open_orders(coincheck)
-            tread_history_list = get_position(session, "request")
+            trade_history_list = get_position(session, "request")
 
-            for obj in tread_history_list:
-                tread_history = obj
+            for obj in trade_history_list:
+                trade_history = obj
 
             # takeされなかったのでキャンセル & data更新
             if len(open_orders) == 1:
                 cancel_order(coincheck, order_id)
-                update_status(session, "not_position") 
+                update_status(session, trade_history, "not_position") 
                 logger.info("Not Position")
             
             # takeされた場合
@@ -143,7 +139,7 @@ if __name__ == "__main__" :
             
             # 変数をセット
             for p in position:
-                tread_history = p
+                trade_history = p
             
             # ポジションを解消したいので、orderを出し続けるためのflg
             order_flg = True
@@ -153,7 +149,7 @@ if __name__ == "__main__" :
                 ticker_info = get_tciker_info(coincheck)
                 ticker_ask = ticker_info["ask"]
 
-                res = create_order(coincheck, side = "sell", amount = tread_amount, price = ticker_ask+1)
+                res = create_order(coincheck, side = "sell", amount = trade_amount, price = ticker_ask+1)
                 order_id = res["id"]
 
                 sleep(1)
@@ -168,7 +164,7 @@ if __name__ == "__main__" :
                 
                 # takeされた場合
                 else:
-                    update_status(session, "close")
+                    update_status(session, trade_history, "close")
                     order_flg = False
                     logger.info("Close  position")
 
@@ -178,6 +174,6 @@ if __name__ == "__main__" :
         sys.exit(1)
 
     ### プロセス終了のため、ファイルを削除
-    os.remove("treade_process.txt")
+    os.remove("trade_process.txt")
     logger.info("=== trade_batch finish ===")
 

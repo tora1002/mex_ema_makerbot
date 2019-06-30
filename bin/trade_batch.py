@@ -80,6 +80,7 @@ def update_status_close(session, trade_history, order_id):
     trade_history.status = "close"
     trade_history.close_order_id = order_id
     trade_history.updated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    session.commit()
 
 def update_status(session, trade_history, position_status):
     trade_history.status = position_status
@@ -111,8 +112,7 @@ if __name__ == "__main__" :
         position = get_position(session, "open")
         
         ### ポジションを持っていない & Gクロスしていた場合
-        #if (len(position) == 0) & signal["gcross"]:
-        if True:
+        if (len(position) == 0) & signal["gcross"]:
         
             logger.info("Gcross & buy order")
             
@@ -123,8 +123,6 @@ if __name__ == "__main__" :
             # 注文
             request_nonce = datetime.now().strftime("%Y%m%d%H%M%S")
             res = create_order(coincheck, side = "buy", amount = trade_amount, price = ticker_bid-1)
-
-            print(res)
 
             order_id = res["id"]
             insert_trade_history(session, request_nonce, trade_amount, order_id)
@@ -146,12 +144,11 @@ if __name__ == "__main__" :
             
             # takeされた場合
             else:
-                update_status(session, "open") 
+                update_status(session, trade_history, "open") 
                 logger.info("Open Position")
     
         ### ポジションを持っている & Dクロスしていた場合
         if (len(position) == 1) & signal["dcross"]:
-        #if True:
 
             logger.info("Dcross & sell order")
             

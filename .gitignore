@@ -1,3 +1,6 @@
 log/
 *.swp
 treade_process.txt
+models/__pycache__/
+setting/__pycache__/
+

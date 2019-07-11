@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
+from pathlib import Path
 from time import sleep
 from datetime import datetime
 from pathlib import Path
@@ -96,13 +97,13 @@ if __name__ == "__main__" :
     logger.info("=== trade_batch start ===")
     
     ### プロセスがないか確認する
-    if (os.path.exists("trade_process.txt")):
+    if (os.path.exists("bp.txt")):
         logger.info("Exist process")
         logger.info("=== trade_batch finish ===")
         sys.exit(1)
 
     ### プロセス起動中ファイルを作成
-    Path("trade_process.txt").touch()
+    Path("bp.txt").touch()
 
     try:
         ### 最新のシグナルを取得
@@ -122,7 +123,7 @@ if __name__ == "__main__" :
 
             # 注文
             request_nonce = datetime.now().strftime("%Y%m%d%H%M%S")
-            res = create_order(coincheck, side = "buy", amount = trade_amount, price = ticker_bid-1)
+            res = create_order(coincheck, side = "buy", amount = trade_amount, price = ticker_bid+2)
 
             order_id = res["id"]
             insert_trade_history(session, request_nonce, trade_amount, order_id)
@@ -164,7 +165,7 @@ if __name__ == "__main__" :
                 ticker_info = get_tciker_info(coincheck)
                 ticker_ask = ticker_info["ask"]
 
-                res = create_order(coincheck, side = "sell", amount = trade_amount, price = ticker_ask+1)
+                res = create_order(coincheck, side = "sell", amount = trade_amount, price = ticker_ask-2)
                 order_id = res["id"]
 
                 sleep(1)
@@ -181,14 +182,13 @@ if __name__ == "__main__" :
                 else:
                     update_status_close(session, trade_history, order_id)
                     order_flg = False
-                    logger.info("Close  position")
+                    logger.info("Close position")
 
     # キャッチして例外をログに記録
     except Exception as e:
         logger.exception(e)
-        sys.exit(1)
 
     ### プロセス終了のため、ファイルを削除
-    os.remove("trade_process.txt")
+    os.remove("bp.txt")
     logger.info("=== trade_batch finish ===")
 

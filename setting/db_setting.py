@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 dialect = "mysql"
 driver = "pymysql"
 username = "root"
-password = "rootroot"
+password = "Yuu-1984-0608"
 host = "localhost"
 database = "crypto_databases"
 charset_type = "utf8"

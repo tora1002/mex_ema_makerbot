@@ -10,12 +10,12 @@ app_home = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__
 sys.path.append(os.path.join(app_home, "setting"))
 from db_setting import ENGINE, Base
 
-class CoincheckEmaTradeHistory(Base):
+class BitflyerEmaTradeHistory(Base):
 
     """
-    CoincheckEmaTradeHistory
+    BitflyerEmaTradeHistory
     """
-    __tablename__ = "coincheck_ema_trade_history"
+    __tablename__ = "bitflyer_ema_trade_history"
  
     id = Column(BIGINT, primary_key = True, nullable = True)
     order_request_nonce = Column(BIGINT, nullable = True)
@@ -33,7 +33,7 @@ class CoincheckEmaTradeHistory(Base):
 
     ### select
     def get_record_filter_status(session, postion_status):
-        return session.query(CoincheckEmaTradeHistory).filter_by(status = postion_status).all()
+        return session.query(BitflyerEmaTradeHistory).filter_by(status = postion_status).all()
 
 def main(args):
     Base.metadata.create_all(bind = ENGINE)

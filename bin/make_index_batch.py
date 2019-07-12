@@ -16,15 +16,15 @@ sys.path.append(os.path.join(app_home, "models"))
 sys.path.append(os.path.join(app_home, "setting"))
 
 # モジュール、設定系の読み込み
-from coincheck_ticker import CoincheckTicker
-from coincheck_6tema_16dema import Coincheck6tema16dema
+from bitflyer_ticker import BitflyerTicker
+from bitflyer_6tema_16dema import Bitflyer6tema16dema
 from db_setting import session
 from logger import logger
-from coincheck_ccxt import coincheck
+from bitflyer_ccxt import bitflyer
 
 
-def get_tciker_info(coincheck):
-    ticker = coincheck.fetch_ticker("BTC/JPY")
+def get_tciker_info(bitflyer):
+    ticker = bitflyer.fetch_ticker("BTC/JPY")
     return ticker["info"]
 
 
@@ -36,14 +36,14 @@ if __name__ == "__main__" :
         request_nonce = datetime.now().strftime("%Y%m%d%H%M%S")
 
         ### tickerを取得 & index価格を作成
-        ticker_info = get_tciker_info(coincheck)
-        index_price = (ticker_info["ask"] +ticker_info["bid"])/2
+        ticker_info = get_tciker_info(bitflyer)
+        index_price = (ticker_info["best_ask"] +ticker_info["best_bid"])/2
 
         ### tickerデータを保存
-        CoincheckTicker.insert(session, request_nonce, ticker_info, index_price)
+        BitflyerTicker.insert(session, request_nonce, ticker_info, index_price)
 
         ### emaデータを取得
-        indexs_desc = Coincheck6tema16dema.get_limit_record_order_desc(session, 30)
+        indexs_desc = Bitflyer6tema16dema.get_limit_record_order_desc(session, 30)
         
         ### 取得したデータを元に、emaデータを加工
         short_index_list = []
@@ -81,7 +81,7 @@ if __name__ == "__main__" :
         dcross = bool((short_ema < long_ema) & (prev_short_ema > prev_long_ema))
 
         ### emaデータを取得
-        Coincheck6tema16dema.insert(session, ticker_info["timestamp"], index_price, short_ema, long_ema, gcross, dcross)
+        Bitflyer6tema16dema.insert(session, ticker_info["timestamp"], index_price, short_ema, long_ema, gcross, dcross)
         
         logger.info("=== make_index_batch finish ===")
 

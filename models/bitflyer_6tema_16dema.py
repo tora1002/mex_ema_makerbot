@@ -10,12 +10,12 @@ app_home = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__
 sys.path.append(os.path.join(app_home, "setting"))
 from db_setting import ENGINE, Base
 
-class Coincheck6tema16dema(Base):
+class Bitflyer6tema16dema(Base):
     
     """
-    Coincheck6tema16demaModel
+    Bitflyer6tema16demaModel
     """
-    __tablename__ = "coincheck_6tema_16dema"
+    __tablename__ = "bitflyer_6tema_16dema"
  
     id = Column(BIGINT, primary_key = True, nullable = True)
     server_nonce = Column(BIGINT, nullable = True)
@@ -28,13 +28,14 @@ class Coincheck6tema16dema(Base):
 
     ##### select
     def get_limit_record_order_desc(session, limit_num):
-        return session.query(Coincheck6tema16dema).order_by(desc(Coincheck6tema16dema.id)).limit(limit_num).all()
+        return session.query(Bitflyer6tema16dema).order_by(desc(Bitflyer6tema16dema.id)).limit(limit_num).all()
 
     ##### insert
     def insert(session, ticker_timestamp, index_price, short_ema, long_ema, gcross, dcross):
+        sharping_time = ticker_timestamp.split(".")[0].replace("T", "").replace("-", "").replace(":", "")
         session.add(
-            Coincheck6tema16dema(
-                server_nonce = datetime.fromtimestamp(ticker_timestamp).strftime("%Y%m%d%H%M%S"),
+            Bitflyer6tema16dema(
+                server_nonce = int(sharping_time),
                 index_price = index_price,
                 short_ema = short_ema,
                 long_ema = long_ema,

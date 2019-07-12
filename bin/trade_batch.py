@@ -14,15 +14,15 @@ sys.path.append(os.path.join(app_home, "models"))
 sys.path.append(os.path.join(app_home, "setting"))
 
 # モジュール、設定系の読み込み
-from coincheck_6tema_16dema import Coincheck6tema16dema
-from coincheck_ema_trade_history import CoincheckEmaTradeHistory
+from bitflyer_6tema_16dema import Bitflyer6tema16dema
+from bitflyer_ema_trade_history import BitflyerEmaTradeHistory
 from db_setting import session
 from logger import logger
-from coincheck_ccxt import coincheck
+from bitflyer_ccxt import bitflyer
 
 def get_signal(session):
     signal = {}
-    index_desc = Coincheck6tema16dema.get_limit_record_order_desc(session, 1)
+    index_desc = Bitflyer6tema16dema.get_limit_record_order_desc(session, 1)
         
     for index in index_desc:
         signal["gcross"] = index.gcross
@@ -31,7 +31,7 @@ def get_signal(session):
     return signal
 
 def get_position(session, position_status):
-    position = CoincheckEmaTradeHistory.get_record_filter_status(session, position_status)
+    position = BitflyerEmaTradeHistory.get_record_filter_status(session, position_status)
 
     ### ポジションが1つ以上存在する
     if len(position) > 1:
@@ -39,34 +39,33 @@ def get_position(session, position_status):
 
     return position
 
-def get_tciker_info(coincheck):
-    ticker = coincheck.fetch_ticker("BTC/JPY")
+def get_tciker_info(bitflyer):
+    ticker = bitflyer.fetch_ticker("BTC/JPY")
     return ticker["info"]
 
-def create_order(coincheck, side, amount, price):
-    res = coincheck.create_order(symbol = "BTC/JPY", type = "limit", side = side, amount = amount, price = price)
+def create_order(bitflyer, side, amount, price):
+    res = bitflyer.create_order(symbol = "BTC/JPY", type = "limit", side = side, amount = amount, price = price)
     
     if res["id"] is None:
         raise Exception("Can not order")
 
     return res
 
-def get_open_orders(coincheck):
-    open_orders = coincheck.fetch_open_orders()
+def get_open_orders(bitflyer):
+    open_orders = bitflyer.fetch_open_orders()
 
     if len(open_orders) > 1:
         raise Exception("Hold multiple position")
 
     return open_orders
 
-def cancel_order(coincheck, order_id):
-    sleep(0.01)
-    coincheck.cancel_order(order_id)
+def cancel_order(bitflyer, order_id):
+    bitflyer.cancel_order(order_id)
     #TODO cancel エラーになった場合はどするか？
 
 def insert_trade_history(session, request_nonce, amount, order_id):
     session.add(
-        CoincheckEmaTradeHistory(
+        BitflyerEmaTradeHistory(
             order_request_nonce = request_nonce,
             amount = amount,
             status = "request",
@@ -97,13 +96,13 @@ if __name__ == "__main__" :
     logger.info("=== trade_batch start ===")
     
     ### プロセスがないか確認する
-    if (os.path.exists("bp.txt")):
+    if (os.path.exists("process.txt")):
         logger.info("Exist process")
         logger.info("=== trade_batch finish ===")
         sys.exit(1)
 
     ### プロセス起動中ファイルを作成
-    Path("bp.txt").touch()
+    Path("process.txt").touch()
 
     try:
         ### 最新のシグナルを取得
@@ -118,12 +117,12 @@ if __name__ == "__main__" :
             logger.info("Gcross & buy order")
             
             # bidの値を取得
-            ticker_info = get_tciker_info(coincheck)
+            ticker_info = get_tciker_info(bitflyer)
             ticker_bid = ticker_info["bid"]
 
             # 注文
             request_nonce = datetime.now().strftime("%Y%m%d%H%M%S")
-            res = create_order(coincheck, side = "buy", amount = trade_amount, price = ticker_bid+2)
+            res = create_order(bitflyer, side = "buy", amount = trade_amount, price = ticker_bid)
 
             order_id = res["id"]
             insert_trade_history(session, request_nonce, trade_amount, order_id)
@@ -131,7 +130,7 @@ if __name__ == "__main__" :
             sleep(1)
 
             # 未決済のポジションを全て取得 
-            open_orders = get_open_orders(coincheck)
+            open_orders = get_open_orders(bitflyer)
             trade_history_list = get_position(session, "request")
 
             for obj in trade_history_list:
@@ -139,7 +138,7 @@ if __name__ == "__main__" :
 
             # takeされなかったのでキャンセル & data更新
             if len(open_orders) == 1:
-                cancel_order(coincheck, order_id)
+                cancel_order(bitflyer, order_id)
                 update_status(session, trade_history, "not_position") 
                 logger.info("Not Position")
             
@@ -162,20 +161,20 @@ if __name__ == "__main__" :
             
             while(order_flg):
                 # askの値を取得
-                ticker_info = get_tciker_info(coincheck)
+                ticker_info = get_tciker_info(bitflyer)
                 ticker_ask = ticker_info["ask"]
 
-                res = create_order(coincheck, side = "sell", amount = trade_amount, price = ticker_ask-2)
+                res = create_order(bitflyer, side = "sell", amount = trade_amount, price = ticker_ask)
                 order_id = res["id"]
 
                 sleep(1)
 
                 # 未決済のポジションを全て取得
-                open_orders = get_open_orders(coincheck)
+                open_orders = get_open_orders(bitflyer)
 
                 # takeされなかったのでキャンセル
                 if len(open_orders) == 1:
-                    cancel_order(coincheck, order_id)
+                    cancel_order(bitflyer, order_id)
                     logger.info("Can not sell order")
                 
                 # takeされた場合
@@ -189,6 +188,6 @@ if __name__ == "__main__" :
         logger.exception(e)
 
     ### プロセス終了のため、ファイルを削除
-    os.remove("bp.txt")
+    os.remove("process.txt")
     logger.info("=== trade_batch finish ===")
 

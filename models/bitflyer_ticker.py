@@ -1,6 +1,7 @@
 import os
 import sys
 from datetime import datetime
+import time
 from sqlalchemy import Column, BIGINT, DECIMAL, DATETIME 
 
 # 親ディレクトリの設定
@@ -10,20 +11,17 @@ app_home = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__
 sys.path.append(os.path.join(app_home, "setting"))
 from db_setting import ENGINE, Base
 
-class CoincheckTicker(Base):
+class BitflyerTicker(Base):
     
     """
-    CoincheckTickerModel
+    BitflyerTickerModel
     """
-    __tablename__ = "coincheck_ticker"
+    __tablename__ = "bitflyer_ticker"
  
     id = Column(BIGINT, primary_key = True, nullable = True)
     request_nonce = Column(BIGINT, nullable = True)
-    last = Column(DECIMAL, nullable = True)
     bid = Column(DECIMAL, nullable = True)
     ask = Column(DECIMAL, nullable = True)
-    high = Column(DECIMAL, nullable = True)
-    low = Column(DECIMAL, nullable = True)
     volume = Column(DECIMAL, nullable = True)
     timestamp = Column(BIGINT, nullable = True)
     server_nonce = Column(BIGINT, nullable = True)
@@ -32,17 +30,16 @@ class CoincheckTicker(Base):
 
     ##### insert
     def insert(session, request_nonce, ticker_info, index_price):
+        sharping_time = ticker_info["timestamp"].split(".")[0].replace("T", " ")
+        print(sharping_time)
         session.add(
-            CoincheckTicker(
+            BitflyerTicker(
                 request_nonce = request_nonce,
-                last = ticker_info["last"],
-                bid = ticker_info["bid"],
-                ask = ticker_info["ask"],
-                high = ticker_info["high"],
-                low = ticker_info["low"],
+                bid = ticker_info["best_bid"],
+                ask = ticker_info["best_ask"],
                 volume = ticker_info["volume"],
-                timestamp = ticker_info["timestamp"],
-                server_nonce = datetime.fromtimestamp(ticker_info["timestamp"]).strftime("%Y%m%d%H%M%S"),
+                timestamp = datetime.strptime(sharping_time, "%Y-%m-%d %H:%M:%S").timestamp(),
+                server_nonce = int(sharping_time.replace(" ", "").replace("-", "").replace(":", "")),
                 index_price = index_price,
                 created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             )

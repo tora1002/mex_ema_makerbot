@@ -15,10 +15,10 @@ sys.path.append(os.path.join(app_home, "models"))
 sys.path.append(os.path.join(app_home, "setting"))
 
 # モジュール、設定系の読み込み
-from coincheck_ema_trade_history import CoincheckEmaTradeHistory
+from bitmex_ema_trade_history import BitmexEmaTradeHistory
 from db_setting import session
 from logger import logger
-from coincheck_ccxt import coincheck
+from bitmex_ccxt import bitmex
 
 if __name__ == "__main__" :
 
@@ -26,46 +26,42 @@ if __name__ == "__main__" :
     
     try:
         #statusがcloseのレコードを取得する
-        close_positions = CoincheckEmaTradeHistory.get_record_filter_status(session, "close")
+        close_positions = BitmexEmaTradeHistory.get_record_filter_status(session, "close")
 
         if close_positions is not None:
         
-            # 直近の取引履歴25件をcoincheckから取得する
-            my_trades = coincheck.get_my_trades()
+            my_trades = bitmex.fetch_my_trades()
             
             # 1件ずつ、order_idをキーに突合し、抜けているデータを保存する
             for trade_history in close_positions:
                 # 変数初期化
                 open_time = None
                 open_rate = None
-                open_price = None
+                open_order_type = None
                 close_time = None
                 close_rate = None
-                close_price = None
+                close_order_type = None
  
                 for my_trade in my_trades:
-                    if my_trade["info"]["order_id"] == trade_history.open_order_id:
-                        open_time = my_trade["info"]["created_at"]
-                        open_rate = my_trade["info"]["rate"]
-                        open_price = my_trade["info"]["funds"]["jpy"]
-                    if my_trade["info"]["order_id"] == trade_history.close_order_id:
-                        close_time = my_trade["info"]["created_at"]
-                        close_rate = my_trade["info"]["rate"]
-                        close_price = my_trade["info"]["funds"]["jpy"]
+                    if my_trade["info"]["orderID"] == trade_history.open_order_id:
+                        open_time = my_trade["datetime"].split(".")[0].replace("T", " ")
+                        open_rate = my_trade["price"]
+                        open_order_type = "maker" if my_trade["fee"]["rate"] < 0 else "taker"
+                    if my_trade["info"]["orderID"] == trade_history.close_order_id:
+                        close_time = my_trade["datetime"].split(".")[0].replace("T", " ")
+                        close_rate = my_trade["price"]
+                        close_order_type = "maker" if my_trade["fee"]["rate"] < 0 else "taker"
  
-                # データ整形
-                sharping_open_time = open_time.split(".")[0].replace("T", " ")
-                sharping_close_time = close_time.split(".")[0].replace("T", " ")
-                profit = float(close_price) + float(open_price)
-                print(close_price)
-                print(open_price)
+                profit = float(close_rate) - float(open_rate)
  
                 # update
                 trade_history.status = "agregated"
-                trade_history.open_time = datetime.strptime(sharping_open_time, "%Y-%m-%d %H:%M:%S")
+                trade_history.open_time = datetime.strptime(open_time, "%Y-%m-%d %H:%M:%S")
                 trade_history.open_rate = open_rate
-                trade_history.close_time =datetime.strptime(sharping_close_time, "%Y-%m-%d %H:%M:%S")
+                trade_history.open_side = open_order_type
+                trade_history.close_time =datetime.strptime(close_time, "%Y-%m-%d %H:%M:%S")
                 trade_history.close_rate = close_rate
+                trade_history.close_side = close_order_type
                 trade_history.profit = profit
                 trade_history.updated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 session.commit()

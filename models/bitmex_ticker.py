@@ -11,18 +11,17 @@ app_home = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__
 sys.path.append(os.path.join(app_home, "setting"))
 from db_setting import ENGINE, Base
 
-class BitflyerTicker(Base):
+class BitmexTicker(Base):
     
     """
-    BitflyerTickerModel
+    BitmexTickerModel
     """
-    __tablename__ = "bitflyer_ticker"
+    __tablename__ = "bitmex_ticker"
  
     id = Column(BIGINT, primary_key = True, nullable = True)
     request_nonce = Column(BIGINT, nullable = True)
     bid = Column(DECIMAL, nullable = True)
     ask = Column(DECIMAL, nullable = True)
-    volume = Column(DECIMAL, nullable = True)
     timestamp = Column(BIGINT, nullable = True)
     server_nonce = Column(BIGINT, nullable = True)
     index_price = Column(DECIMAL, nullable = True)
@@ -30,14 +29,12 @@ class BitflyerTicker(Base):
 
     ##### insert
     def insert(session, request_nonce, ticker_info, index_price):
-        sharping_time = ticker_info["timestamp"].split(".")[0].replace("T", " ")
-        print(sharping_time)
+        sharping_time = ticker_info["datetime"].split(".")[0].replace("T", " ")
         session.add(
-            BitflyerTicker(
+            BitmexTicker(
                 request_nonce = request_nonce,
-                bid = ticker_info["best_bid"],
-                ask = ticker_info["best_ask"],
-                volume = ticker_info["volume"],
+                bid = ticker_info["bid"],
+                ask = ticker_info["ask"],
                 timestamp = datetime.strptime(sharping_time, "%Y-%m-%d %H:%M:%S").timestamp(),
                 server_nonce = int(sharping_time.replace(" ", "").replace("-", "").replace(":", "")),
                 index_price = index_price,
